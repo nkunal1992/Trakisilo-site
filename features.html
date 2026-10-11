@@ -4,232 +4,214 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Features — Trakisilo: Kanban, Clips, Time Tracking & Docs, Offline</title>
-<meta name="description" content="Every Trakisilo feature in action — kanban boards, saved clips with quick-paste, time tracking and timesheets, calendar, chronicle journal, rich board docs, and reusable processes. Free, offline, no account." />
-<style>
-  :root {
-    --bg: #1a202c; --bg2: #222b3a; --card: #232d3f; --line: #33405a;
-    --text: #eef2f8; --dim: #a8b6cb;
-    --blue: #6090e8; --green: #4ed68c; --orange: #f5a623;
-  }
-  * { box-sizing: border-box; margin: 0; }
-  body { background: var(--bg); color: var(--text); font: 16px/1.6 -apple-system, "Segoe UI", Roboto, sans-serif; }
-  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
-  a { color: var(--blue); }
-
-  nav { position: sticky; top: 0; z-index: 50; background: rgba(26,32,44,.88); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
-  nav .wrap { display: flex; align-items: center; gap: 28px; height: 56px; }
-  nav .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 17px; color: var(--text); text-decoration: none; }
-  nav .brand img { width: 26px; height: 26px; border-radius: 6px; }
-  nav .links { display: flex; gap: 22px; font-size: 14.5px; }
-  nav .links a { color: var(--dim); text-decoration: none; }
-  nav .links a:hover, nav .links a.on { color: var(--text); }
-  nav .cta-sm { margin-left: auto; padding: 7px 16px; background: var(--blue); color: #fff; border-radius: 8px; font-weight: 600; font-size: 14px; text-decoration: none; }
-
-  header { padding: 64px 0 24px; text-align: center; }
-  h1 { font-size: 40px; font-weight: 700; }
-  .tag { color: var(--dim); font-size: 19px; max-width: 640px; margin: 10px auto 0; }
-
-  section.feat { padding: 44px 0; border-bottom: 1px solid var(--line); }
-  section.feat:last-of-type { border-bottom: none; }
-  .feat .row { display: grid; grid-template-columns: 1fr 1.15fr; gap: 44px; align-items: center; }
-  .feat .row.flip > .copy { order: 2; }
-  .feat h2 { font-size: 27px; margin-bottom: 10px; }
-  .feat h2 .k { color: var(--blue); }
-  .feat .lead { color: var(--dim); }
-  .feat ul { margin: 16px 0 0; padding: 0; list-style: none; }
-  .feat li { position: relative; padding-left: 22px; margin: 7px 0; color: var(--dim); font-size: 14.5px; }
-  .feat li::before { content: "✓"; position: absolute; left: 0; color: var(--green); font-weight: 700; }
-  .feat video { display: block; width: 100%; border-radius: 12px; border: 1px solid var(--line); background: #000; }
-
-  .more { padding: 48px 0; }
-  .more .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-top: 24px; }
-  .more .cell { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; font-size: 14.5px; }
-  .more .cell b { display: block; margin-bottom: 4px; }
-  .more .cell span { color: var(--dim); font-size: 13.5px; }
-
-  .final { text-align: center; padding: 48px 0 64px; }
-  .cta { display: inline-block; padding: 14px 34px; background: var(--blue); color: #fff; border-radius: 10px; font-weight: 600; font-size: 17px; text-decoration: none; }
-  footer { border-top: 1px solid var(--line); padding: 32px 0 48px; color: var(--dim); font-size: 14px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-
-  @media (max-width: 820px) {
-    .feat .row { grid-template-columns: 1fr; gap: 22px; }
-    .feat .row.flip > .copy { order: 0; }
-    h1 { font-size: 30px; }
-  }
-</style>
+<meta name="description" content="Every Trakisilo feature shown live — kanban boards, saved clips with quick-paste, time tracking and timesheets, calendar, chronicle journal, rich board docs, and reusable processes. Free, offline, no account." />
+<link rel="canonical" href="https://nkunal1992.github.io/Trakisilo-site/features.html" />
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<meta property="og:title" content="Trakisilo — every feature, shown live" />
+<meta property="og:description" content="Kanban, clipboard vault, time tracking, journals, docs and processes — one offline workspace." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://nkunal1992.github.io/Trakisilo-site/features.html" />
+<meta property="og:image" content="https://nkunal1992.github.io/Trakisilo-site/assets/og.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="stylesheet" href="assets/site.css" />
 </head>
 <body>
 
+<a class="skip" href="#main">Skip to content</a>
+
 <nav><div class="wrap">
-  <a class="brand" href="index.html"><img src="icon.png" alt="" />Trakisilo</a>
-  <div class="links">
+  <a class="brand" href="index.html"><img src="icon.png" alt="" width="28" height="28" />Trakisilo</a>
+  <div class="nav-links" id="navlinks">
     <a href="index.html">Home</a>
     <a href="features.html" class="on">Features</a>
+    <a href="index.html#faq">FAQ</a>
   </div>
-  <a class="cta-sm" href="https://apps.microsoft.com/detail/9P67BLH3H7P0">Get it on Microsoft Store</a>
+  <div class="nav-cta">
+    <a href="https://apps.microsoft.com/detail/9P67BLH3H7P0"><img class="badge-sm" src="assets/ms-badge.svg" alt="Get it from Microsoft" height="34" /></a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+  </div>
 </div></nav>
 
-<div class="wrap">
+<div class="subnav"><div class="wrap">
+  <a href="#kanban">Kanban</a><a href="#card">Card detail</a><a href="#clips">Clips</a>
+  <a href="#quickpaste">Quick-paste</a><a href="#time">Time</a><a href="#calendar">Calendar</a>
+  <a href="#chronicle">Chronicle</a><a href="#docs">Board docs</a><a href="#editor">Editor</a>
+  <a href="#processes">Processes</a><a href="#search">Search</a><a href="#themes">Themes</a>
+</div></div>
 
-<header>
-  <h1>Everything in one workspace</h1>
-  <p class="tag">Every feature below is shown running live in the app — short clips, no mockups. Free, offline, no account.</p>
+<main id="main" class="wrap">
+
+<header style="padding:56px 0 20px;text-align:center">
+  <p class="eyebrow">Features</p>
+  <h1>Everything in <span class="grad">one workspace</span></h1>
+  <p class="lead" style="margin:12px auto 0">Every clip below is the real app, recorded live — no mockups. Free, offline, no account.</p>
 </header>
 
-<section class="feat">
+<section class="feat" id="kanban">
   <div class="row">
     <div class="copy">
-      <h2><span class="k">01</span> Kanban boards</h2>
+      <p class="num">01</p>
+      <h2>Kanban boards</h2>
       <p class="lead">Plan work visually on columns you define — with groups for the different areas of your life.</p>
       <ul>
-        <li>Unlimited boards, organized into groups</li>
+        <li><b>Unlimited boards</b>, organized into named groups</li>
         <li>Custom columns — rename, reorder, add your own</li>
         <li>Drag cards between columns, or move via the right-click menu</li>
-        <li>Per-column counters and board stats at a glance</li>
-        <li>Paste a multi-line list to create many cards at once</li>
+        <li>Done/total counters per column, board stats at a glance</li>
+        <li><b>Paste a multi-line list</b> to create many cards at once</li>
       </ul>
     </div>
-    <video src="clips/f-kanban.mp4" autoplay muted loop playsinline preload="metadata"></video>
+    <figure class="frame glow"><video muted loop playsinline preload="none" data-autoplay data-src="assets/v/kanban.mp4" poster="assets/p/kanban.webp" aria-label="Kanban boards in Trakisilo"></video></figure>
   </div>
 </section>
 
-<section class="feat">
+<section class="feat" id="card">
   <div class="row flip">
     <div class="copy">
-      <h2><span class="k">02</span> Card detail</h2>
+      <p class="num">02</p>
+      <h2>Card detail</h2>
       <p class="lead">Every card opens into a full page — the description is a rich editor, not a plain textarea.</p>
       <ul>
-        <li>Rich description with formatting, links, and blocks</li>
+        <li>Rich description with formatting, links and blocks</li>
         <li>Subtasks with progress tracking</li>
-        <li>Comments keep discussion on the work</li>
+        <li><b>Comments</b> keep discussion next to the work</li>
         <li>Labels, priority, estimates, due dates, card colors</li>
         <li>Card links connect related tasks</li>
-        <li>Attach files — images preview and zoom inline</li>
+        <li>File attachments — images preview and zoom inline</li>
       </ul>
     </div>
-    <video src="clips/f-card.mp4" autoplay muted loop playsinline preload="metadata"></video>
+    <figure class="frame glow"><video muted loop playsinline preload="none" data-autoplay data-src="assets/v/card.mp4" poster="assets/p/card.webp" aria-label="Card detail in Trakisilo"></video></figure>
   </div>
 </section>
 
-<section class="feat">
+<section class="feat" id="clips">
   <div class="row">
     <div class="copy">
-      <h2><span class="k">03</span> Saved clips</h2>
+      <p class="num">03</p>
+      <h2>Saved clips</h2>
       <p class="lead">A vault for everything you paste repeatedly — organized into boards and panels.</p>
       <ul>
-        <li>Text, code, links, emails, images, tables, and file paths</li>
-        <li>Code clips keep syntax highlighting per language</li>
+        <li>Text, code, links, emails, images, tables and file paths</li>
+        <li>Code clips keep <b>syntax highlighting</b> per language</li>
         <li>Boards and panels keep large collections tidy</li>
-        <li>Link clips to tasks so they're one click from the work</li>
+        <li><b>Link clips to tasks</b> so they're one click from the work</li>
         <li>Explicit saves only — nothing is captured in the background</li>
       </ul>
     </div>
-    <video src="clips/f-clips.mp4" autoplay muted loop playsinline preload="metadata"></video>
+    <figure class="frame glow"><video muted loop playsinline preload="none" data-autoplay data-src="assets/v/clips.mp4" poster="assets/p/clips.webp" aria-label="Saved clips in Trakisilo"></video></figure>
   </div>
 </section>
 
-<section class="feat">
+<section class="feat" id="quickpaste">
   <div class="row flip">
     <div class="copy">
-      <h2><span class="k">04</span> Quick-paste</h2>
-      <p class="lead">Your clips are never more than two keystrokes away, in any app.</p>
+      <p class="num">04</p>
+      <h2>Quick-paste</h2>
+      <p class="lead">Your clips are never more than two keystrokes away — in any app on your machine.</p>
       <ul>
-        <li>Global hotkey opens a floating picker from anywhere</li>
+        <li>A <b>global hotkey</b> opens the floating picker from anywhere</li>
         <li>Type to filter — Enter pastes and closes</li>
-        <li>Copy vs paste actions, fully customizable shortcut</li>
+        <li>Copy vs paste actions, and a fully customizable shortcut</li>
         <li>Works in every app — the picker floats above all windows</li>
       </ul>
     </div>
-    <video src="clips/f-quickpaste.mp4" autoplay muted loop playsinline preload="metadata"></video>
+    <figure class="frame glow"><video muted loop playsinline preload="none" data-autoplay data-src="assets/v/quickpaste.mp4" poster="assets/p/quickpaste.webp" aria-label="Quick-paste picker in Trakisilo"></video></figure>
   </div>
 </section>
 
-<section class="feat">
+<section class="feat" id="time">
   <div class="row">
     <div class="copy">
-      <h2><span class="k">05</span> Time tracking, timesheets & reports</h2>
+      <p class="num">05</p>
+      <h2>Time tracking, timesheets &amp; reports</h2>
       <p class="lead">Track where the hours actually go — timers tied to real tasks, or manual entries after the fact.</p>
       <ul>
         <li>One-tap timers with live ticking, or log time manually</li>
-        <li>Overlap warnings keep the timeline honest</li>
-        <li>Leave days excluded automatically</li>
+        <li><b>Overlap warnings</b> keep the timeline honest</li>
+        <li>Leave days excluded from the totals</li>
         <li>Weekly timesheet grid with daily totals</li>
-        <li>Reports grouped by board, label, or task — CSV export</li>
+        <li>Reports grouped by board, label or task — <b>CSV export</b></li>
       </ul>
     </div>
-    <video src="clips/f-time.mp4" autoplay muted loop playsinline preload="metadata"></video>
+    <figure class="frame glow"><video muted loop playsinline preload="none" data-autoplay data-src="assets/v/time.mp4" poster="assets/p/time.webp" aria-label="Time tracking and timesheets in Trakisilo"></video></figure>
   </div>
 </section>
 
-<section class="feat">
+<section class="feat" id="calendar">
   <div class="row flip">
     <div class="copy">
-      <h2><span class="k">06</span> Calendar</h2>
+      <p class="num">06</p>
+      <h2>Calendar</h2>
       <p class="lead">See deadlines and logged time on one calendar — plan the week at a glance.</p>
       <ul>
         <li>Month and week views</li>
         <li>Due tasks and time entries on the same grid</li>
-        <li>Color-coded by board</li>
+        <li>Entries tinted by the board they belong to</li>
       </ul>
     </div>
-    <video src="clips/f-calendar.mp4" autoplay muted loop playsinline preload="metadata"></video>
+    <figure class="frame glow"><video muted loop playsinline preload="none" data-autoplay data-src="assets/v/calendar.mp4" poster="assets/p/calendar.webp" aria-label="Calendar in Trakisilo"></video></figure>
   </div>
 </section>
 
-<section class="feat">
+<section class="feat" id="chronicle">
   <div class="row">
     <div class="copy">
-      <h2><span class="k">07</span> Chronicle</h2>
+      <p class="num">07</p>
+      <h2>Chronicle</h2>
       <p class="lead">A typed journal that answers "what did I actually do this week" — and where the release notes write themselves.</p>
       <ul>
-        <li>Typed entries — notes, decisions, releases, risks</li>
+        <li><b>Typed entries</b> — notes, decisions, releases, risks</li>
         <li>Rich blocks inside entries: checklists, code, tables</li>
         <li>Per-entry comments and annotations</li>
         <li>Filter by type; search across chronicles</li>
       </ul>
     </div>
-    <video src="clips/f-chronicle.mp4" autoplay muted loop playsinline preload="metadata"></video>
+    <figure class="frame glow"><video muted loop playsinline preload="none" data-autoplay data-src="assets/v/chronicle.mp4" poster="assets/p/chronicle.webp" aria-label="Chronicle journal in Trakisilo"></video></figure>
   </div>
 </section>
 
-<section class="feat">
+<section class="feat" id="docs">
   <div class="row flip">
     <div class="copy">
-      <h2><span class="k">08</span> Board docs</h2>
+      <p class="num">08</p>
+      <h2>Board docs</h2>
       <p class="lead">A per-project document feed living next to the board — decisions and specs that survive the task that spawned them.</p>
       <ul>
         <li>Docs per board, typed: note, decision, design, discussion, research</li>
         <li>Multiple entries per doc, each with its own comments</li>
         <li>Link docs to the cards they describe</li>
-        <li>Brief line at the top keeps the goal visible</li>
+        <li>The brief line at the top keeps the goal visible</li>
       </ul>
     </div>
-    <video src="clips/f-bdoc.mp4" autoplay muted loop playsinline preload="metadata"></video>
+    <figure class="frame glow"><video muted loop playsinline preload="none" data-autoplay data-src="assets/v/bdoc.mp4" poster="assets/p/bdoc.webp" aria-label="Board docs in Trakisilo"></video></figure>
   </div>
 </section>
 
-<section class="feat">
+<section class="feat" id="editor">
   <div class="row">
     <div class="copy">
-      <h2><span class="k">09</span> Rich editor</h2>
-      <p class="lead">The same editor powers card descriptions, comments, chronicle entries, and board docs — type, then transform.</p>
+      <p class="num">09</p>
+      <h2>Rich editor</h2>
+      <p class="lead">The same editor powers card descriptions, comments, chronicle entries and board docs — type, then transform.</p>
       <ul>
-        <li>Code blocks with syntax highlighting + pretty print</li>
+        <li>Code blocks with <b>syntax highlighting</b> and pretty print</li>
         <li>Tables with real row and column borders</li>
         <li>Collapsible toggles — Tab indents into subtoggles</li>
         <li>Callouts, quotes, checklists, timelines, status pills</li>
-        <li>Mermaid diagrams render inline</li>
+        <li><b>Mermaid diagrams</b> render inline</li>
         <li>Select text → <b>Turn into</b> converts it to any block</li>
       </ul>
     </div>
-    <video src="clips/f-editor.mp4" autoplay muted loop playsinline preload="metadata"></video>
+    <figure class="frame glow"><video muted loop playsinline preload="none" data-autoplay data-src="assets/v/editor.mp4" poster="assets/p/editor.webp" aria-label="Rich editor in Trakisilo"></video></figure>
   </div>
 </section>
 
-<section class="feat">
+<section class="feat" id="processes">
   <div class="row flip">
     <div class="copy">
-      <h2><span class="k">10</span> Processes</h2>
+      <p class="num">10</p>
+      <h2>Processes</h2>
       <p class="lead">Turn work you repeat into a checklist you never have to rebuild.</p>
       <ul>
         <li>Guided wizard captures name, objective, prerequisites, pitfalls</li>
@@ -238,64 +220,78 @@
         <li>Perfect for releases, onboarding, weekly reviews</li>
       </ul>
     </div>
-    <video src="clips/f-process.mp4" autoplay muted loop playsinline preload="metadata"></video>
+    <figure class="frame glow"><video muted loop playsinline preload="none" data-autoplay data-src="assets/v/process.mp4" poster="assets/p/process.webp" aria-label="Processes in Trakisilo"></video></figure>
   </div>
 </section>
 
-<section class="feat">
+<section class="feat" id="search">
   <div class="row">
     <div class="copy">
-      <h2><span class="k">11</span> Search & command palette</h2>
-      <p class="lead">⌘K — or Ctrl+K — jumps to any card, clip, doc, or view without touching the mouse.</p>
+      <p class="num">11</p>
+      <h2>Search &amp; command palette</h2>
+      <p class="lead">⌘K — or Ctrl+K — jumps to any card, clip, doc or view without touching the mouse.</p>
       <ul>
-        <li>Fuzzy search across every surface</li>
-        <li>Jump to tasks, clips, chronicles, processes</li>
+        <li>Instant results across every surface — tasks, clips, chronicles, docs, processes</li>
+        <li>Quick actions: new board, new group, jump to a view</li>
       </ul>
     </div>
-    <video src="clips/f-search.mp4" autoplay muted loop playsinline preload="metadata"></video>
+    <figure class="frame glow"><video muted loop playsinline preload="none" data-autoplay data-src="assets/v/search.mp4" poster="assets/p/search.webp" aria-label="Search palette in Trakisilo"></video></figure>
   </div>
 </section>
 
-<section class="feat">
+<section class="feat" id="themes">
   <div class="row flip">
     <div class="copy">
-      <h2><span class="k">12</span> Make it yours</h2>
-      <p class="lead">Dark and light themes, accent colors, contrast modes, UI scaling, custom statuses and labels.</p>
+      <p class="num">12</p>
+      <h2>Make it yours</h2>
+      <p class="lead">System, dark and light themes — plus accent color, contrast slider, text scaling, and custom statuses and label colors per board.</p>
       <ul>
-        <li>Light, dark, and system themes</li>
-        <li>Accent color picker + high-contrast mode</li>
-        <li>UI scale for readability</li>
+        <li>System, dark and light themes</li>
+        <li>Accent color and contrast controls</li>
+        <li>Text scaling for readability</li>
         <li>Custom task statuses and label colors per board</li>
       </ul>
     </div>
-    <video src="clips/f-themes.mp4" autoplay muted loop playsinline preload="metadata"></video>
+    <figure class="frame glow"><video muted loop playsinline preload="none" data-autoplay data-src="assets/v/themes.mp4" poster="assets/p/themes.webp" aria-label="Theme customization in Trakisilo"></video></figure>
   </div>
 </section>
 
-<section class="more">
-  <h2 style="text-align:center">And everything around it</h2>
-  <div class="grid">
-    <div class="cell"><b>🔒 Fully offline</b><span>No account, no cloud, no telemetry — data stays on your disk</span></div>
-    <div class="cell"><b>💾 Backup & restore</b><span>One file holds your whole workspace — move it anywhere</span></div>
-    <div class="cell"><b>📦 Paste multi-line lists</b><span>Paste bullets from anywhere — each line becomes a card</span></div>
-    <div class="cell"><b>↩️ Undo deletions</b><span>Deleted items restore with an undo toast — no fear</span></div>
-    <div class="cell"><b>🖼️ Inline attachments</b><span>Attach files to cards; images open in a zoomable lightbox</span></div>
-    <div class="cell"><b>🎓 Guided onboarding</b><span>Getting-started checklist, demo replay, and feature tour</span></div>
-    <div class="cell"><b>🗂️ Upcoming panel</b><span>Every due date across boards in one strip</span></div>
-    <div class="cell"><b>⚡ Native & fast</b><span>Rust + webview core — instant launch, tiny footprint</span></div>
+<section>
+  <div class="sec-head center">
+    <p class="eyebrow">Around it</p>
+    <h2>And everything else</h2>
+  </div>
+  <div class="moregrid">
+    <div class="morecell"><b>Fully offline</b><span>No account, no cloud, no telemetry — data stays on your disk</span></div>
+    <div class="morecell"><b>Backup &amp; restore</b><span>Save your whole workspace to a folder; restore in one step</span></div>
+    <div class="morecell"><b>Paste multi-line lists</b><span>Paste bullets from anywhere — each line becomes a card</span></div>
+    <div class="morecell"><b>Undo deletions</b><span>Deleted items restore with an undo toast — no fear</span></div>
+    <div class="morecell"><b>Inline attachments</b><span>Attach files to cards; images open in a zoomable lightbox</span></div>
+    <div class="morecell"><b>Guided onboarding</b><span>Getting-started checklist, demo replay and feature tour</span></div>
+    <div class="morecell"><b>Upcoming panel</b><span>Every due date across boards in one strip</span></div>
+    <div class="morecell"><b>Native &amp; fast</b><span>Rust core with a native shell — instant launch, tiny footprint</span></div>
   </div>
 </section>
 
-<section class="final">
-  <a class="cta" href="https://apps.microsoft.com/detail/9P67BLH3H7P0">Download free on Microsoft Store</a>
-  <p style="margin-top:18px;color:var(--dim)">or <a href="index.html#demo">watch the full 3-minute demo</a> — the complete walkthrough, end to end</p>
+<section>
+  <div class="cta-band">
+    <h2>See it end to end</h2>
+    <p class="lead" style="margin:14px auto 28px"><a href="index.html#demo">Watch the 3-minute walkthrough</a> — or get it free and try every feature yourself</p>
+    <a href="https://apps.microsoft.com/detail/9P67BLH3H7P0"><img class="badge-store" src="assets/ms-badge.svg" alt="Get it from Microsoft" height="52" /></a>
+  </div>
 </section>
 
-<footer>
-  <span>&copy; 2026 Narayan Kunal</span>
-  <span><a href="index.html">Home</a> &middot; <a href="https://github.com/nkunal1992/Trakisilo">GitHub</a> &middot; <a href="https://apps.microsoft.com/detail/9P67BLH3H7P0">Microsoft Store</a></span>
-</footer>
+</main>
 
+<div class="wrap">
+  <footer>
+    <span>© 2026 Narayan Kunal</span>
+    <span>
+      <a href="index.html">Home</a><a href="features.html">Features</a><a href="index.html#faq">FAQ</a><a href="https://apps.microsoft.com/detail/9P67BLH3H7P0">Microsoft Store</a>
+    </span>
+  </footer>
 </div>
+
+<script src="assets/site.js" defer></script>
 </body>
 </html>

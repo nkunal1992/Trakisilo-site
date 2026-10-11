@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nkunal1992.github.io/Trakisilo-site/sitemap.xml
