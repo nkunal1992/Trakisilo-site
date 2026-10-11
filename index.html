@@ -34,6 +34,13 @@
   .card h3 { font-size: 17px; margin-bottom: 8px; }
   .card h3 .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 10px; }
   .card p { color: var(--dim); font-size: 14.5px; }
+  .shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin-top: 28px; }
+  .shots figure { margin: 0; }
+  .shots img { width: 100%; border-radius: 10px; border: 1px solid var(--line); display: block; }
+  .shots figcaption { color: var(--dim); font-size: 13.5px; margin-top: 8px; text-align: center; }
+  .vids { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin-top: 28px; }
+  .vids video { width: 100%; margin: 0; }
+  .vids figcaption { color: var(--dim); font-size: 13.5px; margin-top: 8px; text-align: center; }
   footer { border-top: 1px solid var(--line); margin-top: 40px; padding: 32px 0 48px; color: var(--dim); font-size: 14px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
   a { color: var(--blue); }
 </style>
@@ -61,6 +68,34 @@
     <div class="card"><h3><span class="dot" style="background:var(--blue)"></span>Chronicle — activity journal</h3><p>An automatic daily feed of what you did, with space for your own notes — plus rich project documents per board.</p></div>
     <div class="card"><h3><span class="dot" style="background:var(--green)"></span>Rich documents</h3><p>Code blocks with syntax highlighting, tables, collapsible toggles, callouts, and mermaid diagrams. Select text and turn it into anything.</p></div>
     <div class="card"><h3><span class="dot" style="background:var(--orange)"></span>Processes &amp; calendar</h3><p>Turn recurring work into reusable checklist templates and run them step by step. See tasks and logged time on a calendar.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Short trailers</h2>
+  <p class="lead">Quick journeys through each part of the app.</p>
+  <div class="vids">
+    <figure><video controls preload="none" poster="trailers/thumb-tour.png" src="trailers/tour.mp4"></video><figcaption>Full walkthrough — boards, docs, clips, time, and chronicle in one private workspace</figcaption></figure>
+    <figure><video controls preload="none" poster="trailers/thumb-clips.png" src="trailers/clips.mp4"></video><figcaption>Saved clips — capture reusable snippets, paste them anywhere in two keystrokes</figcaption></figure>
+    <figure><video controls preload="none" poster="trailers/thumb-chronicle.png" src="trailers/chronicle.mp4"></video><figcaption>Chronicle — typed journal entries with rich blocks and per-entry comments</figcaption></figure>
+    <figure><video controls preload="none" poster="trailers/thumb-process.png" src="trailers/process.mp4"></video><figcaption>Processes — reusable checklist workflows you run step by step</figcaption></figure>
+  </div>
+</section>
+
+<section>
+  <h2>Screenshots</h2>
+  <div class="shots">
+    <figure><img loading="lazy" src="shots/01-kanban-board.png" alt="Kanban board with task columns" /><figcaption>Kanban board — drag tasks through your own workflow</figcaption></figure>
+    <figure><img loading="lazy" src="shots/02-task-detail.png" alt="Task detail dialog" /><figcaption>Card detail — subtasks, labels, estimates, comments, and linked clips</figcaption></figure>
+    <figure><img loading="lazy" src="shots/03-saved-clips.png" alt="Saved clips view" /><figcaption>Saved clips — quick-paste reusable text, code, links, and images anywhere</figcaption></figure>
+    <figure><img loading="lazy" src="shots/04-time-tracker.png" alt="Time tracker" /><figcaption>Time tracker — timers or manual entries per task, with overlap warnings</figcaption></figure>
+    <figure><img loading="lazy" src="shots/05-weekly-timesheet.png" alt="Weekly timesheet" /><figcaption>Weekly timesheets and grouped reports — export to CSV</figcaption></figure>
+    <figure><img loading="lazy" src="shots/06-time-reports.png" alt="Time reports" /><figcaption>Time reports by board, label, or task</figcaption></figure>
+    <figure><img loading="lazy" src="shots/07-calendar.png" alt="Calendar view" /><figcaption>Calendar — see tasks and logged time together</figcaption></figure>
+    <figure><img loading="lazy" src="shots/08-chronicle.png" alt="Chronicle journal" /><figcaption>Chronicle — an automatic daily journal with your own notes</figcaption></figure>
+    <figure><img loading="lazy" src="shots/09-process-run.png" alt="Process run" /><figcaption>Processes — turn repeated work into step-by-step checklists</figcaption></figure>
+    <figure><img loading="lazy" src="shots/10-command-palette.png" alt="Command palette" /><figcaption>Jump anywhere with global search (Ctrl+K)</figcaption></figure>
+    <figure><img loading="lazy" src="shots/11-settings-appearance.png" alt="Appearance settings" /><figcaption>Dark themes, accents, contrast, and UI scaling</figcaption></figure>
   </div>
 </section>
 
