@@ -33,4 +33,12 @@ code=$(curl -s -o /dev/null -w '%{http_code}' -L --max-time 30 \
   "https://github.com/nkunal1992/Trakisilo-site/releases/latest/download/Trakisilo-macOS-universal.dmg")
 [ "$code" = 200 ] || { echo "DMG-$code stable macOS download link"; fail=1; }
 
+# CSS-var lint — every var(--x) used must be defined somewhere in site.css
+defs=$(grep -oE '\-\-[a-zA-Z0-9-]+:' assets/site.css | tr -d ':' | sort -u)
+uses=$(grep -oE 'var\(--[a-zA-Z0-9-]+\)' assets/site.css | sed -E 's/var\(|\)//g' | sort -u)
+missing=$(comm -13 <(echo "$defs") <(echo "$uses"))
+if [ -n "$missing" ]; then
+  echo "CSS-VAR undefined: $missing"; fail=1
+fi
+
 [ "$fail" = 0 ] && echo "ALL GREEN" || exit 1

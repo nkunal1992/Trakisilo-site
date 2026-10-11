@@ -68,18 +68,31 @@
   <div class="steps">
     <figure class="step-fig">
       <div class="step-no">1</div>
-      <div class="frame"><img loading="lazy" src="assets/mac/1-blocked.webp" alt="macOS dialog blocking Trakisilo at first launch" /></div>
+      <div class="mdlg">
+        <div class="m-icon">T</div>
+        <div class="m-title">&ldquo;Trakisilo&rdquo; Not Opened</div>
+        <div class="m-body">Apple could not verify &ldquo;Trakisilo&rdquo; is free of malware that may harm your Mac or compromise your privacy.</div>
+        <div class="m-btns"><span class="m-btn">Done</span><span class="m-btn red">Move to Bin</span></div>
+      </div>
       <figcaption><b>Open it once.</b> macOS shows "Apple could not verify Trakisilo" — that's the unsigned check working as designed.</figcaption>
     </figure>
     <figure class="step-fig">
       <div class="step-no">2</div>
-      <div class="frame"><img loading="lazy" src="assets/mac/2-settings.webp" alt="Privacy & Security pane showing the Open Anyway button" /></div>
+      <div class="mpane">
+        <div class="m-head">System Settings &nbsp;›&nbsp; <b>Privacy &amp; Security</b></div>
+        <div class="mrow"><span>"Trakisilo" was blocked to protect your Mac.<span class="m-sub">Apple could not verify it is free of malware.</span></span><span class="m-btn">Open Anyway</span></div>
+      </div>
       <figcaption><b>System Settings → Privacy &amp; Security.</b> Scroll to Security — your blocked app appears with an <b>Open Anyway</b> button.</figcaption>
     </figure>
     <figure class="step-fig">
       <div class="step-no">3</div>
-      <div class="frame"><img loading="lazy" src="assets/mac/3-confirm.webp" alt="macOS confirmation dialog for opening Trakisilo" /></div>
-      <figcaption><b>Confirm.</b> Click Open Anyway, then Open, and enter your password once. After that, Trakisilo opens normally — until the next update.</figcaption>
+      <div class="mdlg">
+        <div class="m-icon">T</div>
+        <div class="m-title">Open &ldquo;Trakisilo&rdquo;?</div>
+        <div class="m-body">Apple is not able to verify that it is free from malware that could harm your Mac or compromise your privacy. Don't open this unless you are certain it is from a trustworthy source.</div>
+        <div class="m-btns"><span class="m-btn red">Move to Bin</span><span class="m-btn pri">Open Anyway</span><span class="m-btn">Done</span></div>
+      </div>
+      <figcaption><b>Confirm.</b> Click Open Anyway, then enter your password (or Touch ID) once. After that, Trakisilo opens normally — until the next update.</figcaption>
     </figure>
   </div>
 
@@ -99,17 +112,31 @@
   <div class="steps">
     <figure class="step-fig">
       <div class="step-no">1</div>
-      <div class="frame"><img loading="lazy" src="assets/mac/4-automation.webp" alt="macOS prompt asking to let Trakisilo control System Events" /></div>
+      <div class="mdlg">
+        <div class="m-icon">T</div>
+        <div class="m-title">&ldquo;Trakisilo&rdquo; wants access to control &ldquo;System Events&rdquo;.</div>
+        <div class="m-body">Allowing control will provide access to documents and data in &ldquo;System Events&rdquo;, and to perform actions within that app.</div>
+        <div class="m-btns"><span class="m-btn">Don't Allow</span><span class="m-btn pri">Allow</span></div>
+      </div>
       <figcaption><b>Allow "control System Events".</b> macOS Automation permission — Trakisilo uses it only to send the ⌘V keystroke back to your app.</figcaption>
     </figure>
     <figure class="step-fig">
       <div class="step-no">2</div>
-      <div class="frame"><img loading="lazy" src="assets/mac/5-permission.webp" alt="Trakisilo quick-paste notice offering to open Accessibility settings" /></div>
-      <figcaption><b>If pasting is blocked, macOS asks.</b> Its prompt jumps straight to the right pane — the picker also shows an in-app notice with an Open settings button.</figcaption>
+      <div class="mdlg" style="margin-bottom:10px">
+        <div class="m-body" style="margin-bottom:14px"><b style="color:#f2f2f7;font-size:13.5px">&ldquo;Trakisilo&rdquo; would like to control this Mac and access your data.</b><br><br>Grant access to this application in Privacy &amp; Security settings, located in System Settings.</div>
+        <div class="m-btns"><span class="m-btn">Open System Settings</span><span class="m-btn">Deny</span></div>
+      </div>
+      <div class="mnotice"><span><b>Copied</b> — allow Trakisilo in Accessibility to auto-paste, or press ⌘V</span><span class="m-btn">Open settings</span></div>
+      <figcaption><b>If pasting is blocked, macOS asks</b> — and the picker shows its own notice with an "Open settings" button. Both jump straight to the right pane.</figcaption>
     </figure>
     <figure class="step-fig">
       <div class="step-no">3</div>
-      <div class="frame"><img loading="lazy" src="assets/mac/6-accessibility.webp" alt="Accessibility pane with Trakisilo toggled on" /></div>
+      <div class="mpane">
+        <div class="m-head">System Settings &nbsp;›&nbsp; <b>Privacy &amp; Security</b> &nbsp;›&nbsp; Accessibility</div>
+        <div class="mrow"><span class="mapp"><span class="m-icon grey">A</span>Example App</span><span class="mtg" style="background:#55555d"></span></div>
+        <div class="mrow"><span class="mapp"><span class="m-icon">T</span>Trakisilo</span><span class="mtg"></span></div>
+        <div class="mrow"><span class="mapp"><span class="m-icon grey">A</span>Example App</span><span class="mtg" style="background:#55555d"></span></div>
+      </div>
       <figcaption><b>Toggle Trakisilo on in Accessibility.</b> That enables auto-paste for every app. Copy mode (⌘↩ / ⌥-click) needs no permission at all.</figcaption>
     </figure>
   </div>

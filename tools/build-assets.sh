@@ -15,13 +15,25 @@ A="$HERE/assets"
 
 LOOPS_LIST="f-hero f-kanban f-card f-clips f-quickpaste f-time f-calendar f-chronicle f-bdoc f-editor f-process f-search f-themes"
 
+# Per-loop crops + poster moments live in tools/crops.json — the loops are
+# recorded full-window at 1920x1080; cropping into each feature's region
+# keeps the UI legible at the ~400-650px display sizes on the pages.
+read_json() { python3 -c "import json,sys;d=json.load(open('$HERE/tools/crops.json'));v=d[sys.argv[1]][sys.argv[2]];print('' if v is None else v)" "$1" "$2"; }
+
 for n in $LOOPS_LIST; do
   src="$LOOPS/$n.mp4"; [ -f "$src" ] || { echo "skip $n (missing)"; continue; }
   w=1280; crf=26
   [ "$n" = "f-hero" ] && { w=1600; crf=24; }
   out="$A/v/${n#f-}.mp4"
+  crop=$(read_json "$n" crop)
+  vf="scale=$w:-2"
+  if [ -n "$crop" ]; then
+    IFS=', ' read -r cx cy cw <<<"${crop//[\[\]]/}"
+    ch=$(( cw * 9 / 16 ))
+    vf="crop=$cw:$ch:$cx:$cy,scale=$w:-2"
+  fi
   ffmpeg -hide_banner -loglevel error -y -i "$src" \
-    -vf "scale=$w:-2" -c:v libx264 -preset slow -crf "$crf" \
+    -vf "$vf" -c:v libx264 -preset slow -crf "$crf" \
     -pix_fmt yuv420p -an -movflags +faststart "$out"
 done
 
@@ -43,11 +55,33 @@ def save_webp(im, path, w):
     im.save(path, "WEBP", quality=82, method=6)
     print(" ", os.path.basename(path), im.size)
 
-# Posters — the recorder writes a mid-action thumb per loop.
+# Posters — money frame per loop: extract poster_t * duration from the
+# cropped OUTPUT video so the poster matches what plays. tour keeps the
+# recorder's mid-action thumb.
+import json, subprocess
+crops = json.load(open(os.path.join(root, "tools/crops.json")))
+for n in os.listdir(loops):
+    if not n.startswith("f-") or not n.endswith(".mp4"):
+        continue
+    name = n[2:-4]
+    out_mp4 = f"{assets}/v/{name}.mp4"
+    if not os.path.exists(out_mp4):
+        continue
+    dur = float(subprocess.check_output([
+        "ffprobe","-v","error","-show_entries","format=duration",
+        "-of","csv=p=0", out_mp4]).decode().strip())
+    t = crops.get(n[:-4], {}).get("poster_t", 0.5) * dur
+    subprocess.check_call([
+        "ffmpeg","-v","error","-y","-ss",str(t),"-i",out_mp4,
+        "-frames:v","1","/tmp/_poster.png"])
+    im = Image.open("/tmp/_poster.png").convert("RGB")
+    save_webp(im, f"{assets}/p/{name}.webp", 1280)
+
 for n in os.listdir(loops):
     if n.startswith("thumb-") and n.endswith(".png"):
         name = n[6:-4]
-        name = name[2:] if name.startswith("f-") else name
+        if name.startswith("f-"):
+            continue  # loop posters come from the money-frame pass above
         im = Image.open(os.path.join(loops, n)).convert("RGB")
         save_webp(im, f"{assets}/p/{name}.webp", 1280)
 
