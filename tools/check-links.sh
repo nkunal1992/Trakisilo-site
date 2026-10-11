@@ -7,13 +7,13 @@ BASE="https://nkunal1992.github.io/Trakisilo-site"
 fail=0
 cd "$HERE"
 
-grep -ohE '(src|href|poster|content)="[^"#][^"]*"' index.html features.html 404.html 2>/dev/null \
+grep -ohE '(src|href|poster)="[^"#][^"]*"' index.html features.html 404.html 2>/dev/null \
   | sed -E 's/^[a-z]+="//; s/"$//' | sort -u | while read -r u; do
   case "$u" in
     https://github.com/nkunal1992/Trakisilo|https://github.com/nkunal1992/Trakisilo/*|http://github.com/nkunal1992/Trakisilo*)
       echo "PRIVATE-LINK $u"; exit 1 ;;
     http*|mailto:*) echo "EXT  $u" ;;
-    *) [ -f "$u" ] && echo "ok   $u" || { echo "MISS $u"; exit 1; } ;;
+    *) f="${u%%#*}"; [ -f "$f" ] && echo "ok   $u" || { echo "MISS $u"; exit 1; } ;;
   esac
 done > /tmp/site-links.txt || true
 
