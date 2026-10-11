@@ -48,7 +48,7 @@
     {"@type": "Question", "name": "Which Windows versions does it run on?",
      "acceptedAnswer": {"@type": "Answer", "text": "Windows 10 (1809+) and Windows 11, on x64 and ARM64, installed from the Microsoft Store."}},
     {"@type": "Question", "name": "Is there a macOS version?",
-     "acceptedAnswer": {"@type": "Answer", "text": "Yes — brew install --cask nkunal1992/tap/trakisilo, or download the DMG and right-click → Open once. Universal build for Apple Silicon and Intel."}},
+     "acceptedAnswer": {"@type": "Answer", "text": "Yes — brew install --cask nkunal1992/tap/trakisilo, or download the DMG (universal, Apple Silicon + Intel). The build is unsigned: approve once via System Settings → Privacy & Security → Open Anyway."}},
     {"@type": "Question", "name": "How do I report a bug or request a feature?",
      "acceptedAnswer": {"@type": "Answer", "text": "Through the in-app ? help panel or the feedback link on this site."}}
   ]
@@ -84,7 +84,7 @@
         <a href="https://apps.microsoft.com/detail/9P67BLH3H7P0"><img class="badge-store" src="assets/ms-badge.svg" alt="Get it from Microsoft" height="52" /></a>
         <a class="more" href="features.html">See every feature →</a>
       </div>
-      <p class="lead" style="font-size:14px;margin-top:16px">Also on macOS — <code style="background:var(--card);border:1px solid var(--line);padding:3px 10px;border-radius:6px;font-size:13.5px">brew install --cask nkunal1992/tap/trakisilo</code> or <a href="https://github.com/nkunal1992/Trakisilo-site/releases/latest">download the DMG</a> (right-click → Open on first launch).</p>
+      <p class="lead" style="font-size:14px;margin-top:16px">Also on macOS — <code style="background:var(--card);border:1px solid var(--line);padding:3px 10px;border-radius:6px;font-size:13.5px">brew install --cask nkunal1992/tap/trakisilo</code> or <a href="https://github.com/nkunal1992/Trakisilo-site/releases/latest">download the DMG</a>. First launch needs one approval in System Settings (unsigned build).</p>
       <div class="facts">
         <span class="fact"><b>✓</b> 100% free</span>
         <span class="fact"><b>✓</b> Fully offline</span>
@@ -225,7 +225,7 @@
     <details><summary>Does the clipboard manager record everything I copy?</summary><p>No — nothing is captured in the background. A clip exists only when you explicitly save one.</p></details>
     <details><summary>Is there sync or a mobile app?</summary><p>No. Offline is a deliberate design choice, not a missing feature — your data never lives on someone else's server.</p></details>
     <details><summary>Which Windows versions does it run on?</summary><p>Windows 10 (1809+) and Windows 11, x64 and ARM64, installed from the Microsoft Store.</p></details>
-    <details><summary>Is there a macOS version?</summary><p>Yes — install with <code>brew install --cask nkunal1992/tap/trakisilo</code> (no warnings) or <a href="https://github.com/nkunal1992/Trakisilo-site/releases/latest">download the DMG</a> and right-click → Open once. Universal build — Apple Silicon and Intel.</p></details>
+    <details><summary>Is there a macOS version?</summary><p>Yes — install with <code>brew install --cask nkunal1992/tap/trakisilo</code> or <a href="https://github.com/nkunal1992/Trakisilo-site/releases/latest">download the DMG</a> (universal — Apple Silicon + Intel). The build is unsigned, so on first launch macOS asks you to approve it once: open it, then System Settings → Privacy &amp; Security → <b>Open Anyway</b>.</p></details>
     <details><summary>How do I report a bug or request a feature?</summary><p>Use the in-app ? help panel, or <a href="https://github.com/nkunal1992/Trakisilo-site/issues">open an issue</a> — feedback lands directly with the developer.</p></details>
   </div>
 </section>
