@@ -18,7 +18,15 @@
   * { box-sizing: border-box; margin: 0; }
   body { background: var(--bg); color: var(--text); font: 16px/1.6 -apple-system, "Segoe UI", Roboto, sans-serif; }
   .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
-  header { padding: 72px 0 40px; text-align: center; }
+  nav { position: sticky; top: 0; z-index: 50; background: rgba(26,32,44,.88); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  nav .wrap { display: flex; align-items: center; gap: 28px; height: 56px; }
+  nav .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 17px; color: var(--text); text-decoration: none; }
+  nav .brand img { width: 26px; height: 26px; border-radius: 6px; }
+  nav .links { display: flex; gap: 22px; font-size: 14.5px; }
+  nav .links a { color: var(--dim); text-decoration: none; }
+  nav .links a:hover, nav .links a.on { color: var(--text); }
+  nav .cta-sm { margin-left: auto; padding: 7px 16px; background: var(--blue); color: #fff; border-radius: 8px; font-weight: 600; font-size: 14px; text-decoration: none; }
+  header { padding: 56px 0 40px; text-align: center; }
   header img { width: 96px; height: 96px; border-radius: 22px; }
   h1 { font-size: 44px; font-weight: 700; margin: 18px 0 8px; }
   .tag { color: var(--dim); font-size: 20px; }
@@ -46,6 +54,16 @@
 </style>
 </head>
 <body>
+
+<nav><div class="wrap">
+  <a class="brand" href="index.html"><img src="icon.png" alt="" />Trakisilo</a>
+  <div class="links">
+    <a href="index.html" class="on">Home</a>
+    <a href="features.html">Features</a>
+  </div>
+  <a class="cta-sm" href="https://apps.microsoft.com/detail/9P67BLH3H7P0">Get it on Microsoft Store</a>
+</div></nav>
+
 <div class="wrap">
 
 <header>
