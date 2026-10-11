@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Trakisilo — Offline Kanban, Clipboard & Time Tracker for Windows</title>
-<meta name="description" content="Free, offline-first task manager for Windows: kanban boards, clipboard manager with quick-paste, time tracking with weekly timesheets, journals and docs. No account, no cloud." />
+<title>Trakisilo — Offline Kanban, Clipboard & Time Tracker for Windows & Mac</title>
+<meta name="description" content="Free, offline-first task manager for Windows and macOS: kanban boards, clipboard manager with quick-paste, time tracking with weekly timesheets, journals and docs. No account, no cloud." />
 <link rel="canonical" href="https://nkunal1992.github.io/Trakisilo-site/" />
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
 <link rel="apple-touch-icon" href="apple-touch-icon.png" />
@@ -21,10 +21,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Trakisilo",
-  "operatingSystem": "Windows 10, Windows 11",
+  "operatingSystem": "Windows 10, Windows 11, macOS 10.15+",
   "applicationCategory": "ProductivityApplication",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
   "installUrl": "https://apps.microsoft.com/detail/9P67BLH3H7P0",
+  "downloadUrl": [
+    "https://apps.microsoft.com/detail/9P67BLH3H7P0",
+    "https://github.com/nkunal1992/Trakisilo-site/releases/latest/download/Trakisilo-macOS-universal.dmg"
+  ],
   "author": { "@type": "Person", "name": "Narayan Kunal" }
 }
 </script>
@@ -45,10 +49,8 @@
      "acceptedAnswer": {"@type": "Answer", "text": "No. Nothing is captured in the background. A clip exists only when you explicitly save one."}},
     {"@type": "Question", "name": "Is there sync or a mobile app?",
      "acceptedAnswer": {"@type": "Answer", "text": "No — offline is a deliberate design choice, not a missing feature. Your data never lives on someone else's server."}},
-    {"@type": "Question", "name": "Which Windows versions does it run on?",
-     "acceptedAnswer": {"@type": "Answer", "text": "Windows 10 (1809+) and Windows 11, on x64 and ARM64, installed from the Microsoft Store."}},
-    {"@type": "Question", "name": "Is there a macOS version?",
-     "acceptedAnswer": {"@type": "Answer", "text": "Yes — brew install --cask nkunal1992/tap/trakisilo, or download the DMG (universal, Apple Silicon + Intel). The build is unsigned: approve once via System Settings → Privacy & Security → Open Anyway."}},
+    {"@type": "Question", "name": "Which platforms does it run on?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Windows 10 (1809+) and 11 on x64 and ARM64 via the Microsoft Store; macOS 10.15+ on Apple Silicon and Intel via brew or DMG (unsigned — approve once via System Settings → Open Anyway)."}},
     {"@type": "Question", "name": "How do I report a bug or request a feature?",
      "acceptedAnswer": {"@type": "Answer", "text": "Through the in-app ? help panel or the feedback link on this site."}}
   ]
@@ -67,7 +69,7 @@
     <a href="#faq">FAQ</a>
   </div>
   <div class="nav-cta">
-    <a href="https://apps.microsoft.com/detail/9P67BLH3H7P0"><img class="badge-sm" src="assets/ms-badge.svg" alt="Get it from Microsoft" height="34" /></a>
+    <a class="nav-dl" href="download.html">Download</a>
     <button class="nav-toggle" aria-label="Menu">☰</button>
   </div>
 </div></nav>
@@ -81,15 +83,15 @@
       <h1>Tasks, clips, and time — <span class="grad">one private workspace</span>.</h1>
       <p class="lead">Kanban boards, a clipboard vault with a global quick-paste, time tracking with timesheets, project docs and a journal — all on your machine. No account. No cloud. No subscription.</p>
       <div class="hero-cta">
-        <a href="https://apps.microsoft.com/detail/9P67BLH3H7P0"><img class="badge-store" src="assets/ms-badge.svg" alt="Get it from Microsoft" height="52" /></a>
+        <a class="cta-win" href="https://apps.microsoft.com/detail/9P67BLH3H7P0"><img class="badge-store" src="assets/ms-badge.svg" alt="Get it from Microsoft" height="52" /></a>
+        <a class="dl-btn cta-mac" href="download.html">Download for Mac</a>
         <a class="more" href="features.html">See every feature →</a>
       </div>
-      <p class="lead" style="font-size:14px;margin-top:16px">Also on macOS — <code style="background:var(--card);border:1px solid var(--line);padding:3px 10px;border-radius:6px;font-size:13.5px">brew install --cask nkunal1992/tap/trakisilo</code> or <a href="https://github.com/nkunal1992/Trakisilo-site/releases/latest">download the DMG</a>. First launch needs one approval in System Settings (unsigned build).</p>
       <div class="facts">
         <span class="fact"><b>✓</b> 100% free</span>
         <span class="fact"><b>✓</b> Fully offline</span>
         <span class="fact"><b>✓</b> No account, no telemetry</span>
-        <span class="fact"><b>✓</b> Native x64 + ARM64</span>
+        <span class="fact"><b>✓</b> Windows &amp; macOS — native</span>
       </div>
     </div>
     <figure class="frame glow">
@@ -224,8 +226,7 @@
     <details><summary>How do I back up or move to a new PC?</summary><p>Settings → Backup saves your whole workspace to a folder you choose. On the new machine, Settings → Restore picks it up in one step.</p></details>
     <details><summary>Does the clipboard manager record everything I copy?</summary><p>No — nothing is captured in the background. A clip exists only when you explicitly save one.</p></details>
     <details><summary>Is there sync or a mobile app?</summary><p>No. Offline is a deliberate design choice, not a missing feature — your data never lives on someone else's server.</p></details>
-    <details><summary>Which Windows versions does it run on?</summary><p>Windows 10 (1809+) and Windows 11, x64 and ARM64, installed from the Microsoft Store.</p></details>
-    <details><summary>Is there a macOS version?</summary><p>Yes — install with <code>brew install --cask nkunal1992/tap/trakisilo</code> or <a href="https://github.com/nkunal1992/Trakisilo-site/releases/latest">download the DMG</a> (universal — Apple Silicon + Intel). The build is unsigned, so on first launch macOS asks you to approve it once: open it, then System Settings → Privacy &amp; Security → <b>Open Anyway</b>.</p></details>
+    <details><summary>Which platforms does it run on?</summary><p><b>Windows</b> 10 (1809+) and 11, x64 and ARM64 — via the <a href="https://apps.microsoft.com/detail/9P67BLH3H7P0">Microsoft Store</a>. <b>macOS</b> 10.15+, Apple Silicon and Intel — via <a href="download.html">brew or DMG</a>. The Mac build is unsigned, so first launch needs one approval in System Settings → Privacy &amp; Security → <b>Open Anyway</b> (<a href="download.html#mac-first-launch">guide</a>).</p></details>
     <details><summary>How do I report a bug or request a feature?</summary><p>Use the in-app ? help panel, or <a href="https://github.com/nkunal1992/Trakisilo-site/issues">open an issue</a> — feedback lands directly with the developer.</p></details>
   </div>
 </section>
@@ -234,7 +235,8 @@
   <div class="cta-band">
     <h2>Your work, on your machine.</h2>
     <p class="lead" style="margin:14px auto 28px">Free forever · installs in seconds · nothing to sign up for</p>
-    <a href="https://apps.microsoft.com/detail/9P67BLH3H7P0"><img class="badge-store" src="assets/ms-badge.svg" alt="Get it from Microsoft" height="52" /></a>
+    <a class="cta-win" href="https://apps.microsoft.com/detail/9P67BLH3H7P0"><img class="badge-store" src="assets/ms-badge.svg" alt="Get it from Microsoft" height="52" /></a>
+    <a class="dl-btn cta-mac" href="download.html">Download for Mac</a>
   </div>
 </section>
 
@@ -244,7 +246,7 @@
   <footer>
     <span>© 2026 Narayan Kunal</span>
     <span>
-      <a href="index.html">Home</a><a href="features.html">Features</a><a href="#faq">FAQ</a><a href="https://apps.microsoft.com/detail/9P67BLH3H7P0">Microsoft Store</a>
+      <a href="index.html">Home</a><a href="features.html">Features</a><a href="download.html">Download</a><a href="#faq">FAQ</a><a href="https://apps.microsoft.com/detail/9P67BLH3H7P0">Microsoft Store</a>
     </span>
   </footer>
 </div>

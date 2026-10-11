@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Download Trakisilo — Windows &amp; macOS</title>
+<meta name="description" content="Download Trakisilo for Windows (Microsoft Store) or macOS (DMG / Homebrew). Free, offline-first, no account." />
+<link rel="canonical" href="https://nkunal1992.github.io/Trakisilo-site/download.html" />
+<meta property="og:title" content="Download Trakisilo" />
+<meta property="og:description" content="Free, offline-first kanban, clipboard vault and time tracker — Windows &amp; macOS." />
+<meta property="og:image" content="https://nkunal1992.github.io/Trakisilo-site/assets/og.png" />
+<meta property="og:type" content="website" />
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<link rel="stylesheet" href="assets/site.css" />
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<nav><div class="wrap">
+  <a class="brand" href="index.html"><img src="icon.png" alt="" width="28" height="28" />Trakisilo</a>
+  <div class="nav-links" id="navlinks">
+    <a href="index.html">Home</a>
+    <a href="features.html">Features</a>
+    <a href="index.html#faq">FAQ</a>
+  </div>
+  <div class="nav-cta">
+    <a class="nav-dl" href="download.html">Download</a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+  </div>
+</div></nav>
+
+<main id="main" class="wrap">
+
+<header class="hero slim">
+  <p class="eyebrow">Free &middot; No account &middot; No cloud</p>
+  <h1>Download Trakisilo</h1>
+  <p class="lead">One private workspace for boards, clips, time and docs — on Windows and macOS.</p>
+</header>
+
+<section class="dl-grid">
+  <article class="dl-card">
+    <h2>Windows</h2>
+    <a href="https://apps.microsoft.com/detail/9P67BLH3H7P0"><img class="badge-store" src="assets/ms-badge.svg" alt="Get it from Microsoft" height="48" /></a>
+    <p class="dl-meta">Windows 10 (1809+) &amp; 11 · x64 + ARM64 · updates automatically via the Store</p>
+  </article>
+
+  <article class="dl-card">
+    <h2>macOS</h2>
+    <a class="dl-btn" href="https://github.com/nkunal1992/Trakisilo-site/releases/latest/download/Trakisilo-macOS-universal.dmg">Download for Mac</a>
+    <p class="dl-meta">v<span data-mac-version>1.10.1</span> · universal — Apple Silicon + Intel · <span data-mac-size>20.0</span> MB · macOS 10.15+ · <span data-mac-date>11 Oct 2026</span></p>
+    <div class="brew">
+      <code>brew install --cask nkunal1992/tap/trakisilo</code>
+      <button class="copy-btn" data-copy="brew install --cask nkunal1992/tap/trakisilo">Copy</button>
+    </div>
+    <details class="dl-sha"><summary>sha256</summary><code><span data-mac-sha>ce4fbcd0fb6801d355ffa0b1b3149e63de2a53cb131390bfba9bc0f3380a35c8</span></code></details>
+    <p class="dl-note">Unsigned build — first launch needs one approval (steps below).</p>
+  </article>
+</section>
+
+<p class="dl-other">Linux isn't supported yet — <a href="https://github.com/nkunal1992/Trakisilo-site/issues">let us know</a> if you need it.</p>
+
+<section id="mac-first-launch">
+  <h2>First launch on Mac</h2>
+  <p class="lead">Trakisilo is free and has no Apple Developer certificate (that's the $99/yr we'd rather not pass to you). macOS asks you to approve an unsigned app <b>once per version</b> — takes about 30 seconds.</p>
+
+  <div class="steps">
+    <figure class="step-fig">
+      <div class="step-no">1</div>
+      <div class="frame"><img loading="lazy" src="assets/mac/1-blocked.webp" alt="macOS dialog blocking Trakisilo at first launch" /></div>
+      <figcaption><b>Open it once.</b> macOS shows "Apple could not verify Trakisilo" — that's the unsigned check working as designed.</figcaption>
+    </figure>
+    <figure class="step-fig">
+      <div class="step-no">2</div>
+      <div class="frame"><img loading="lazy" src="assets/mac/2-settings.webp" alt="Privacy & Security pane showing the Open Anyway button" /></div>
+      <figcaption><b>System Settings → Privacy &amp; Security.</b> Scroll to Security — your blocked app appears with an <b>Open Anyway</b> button.</figcaption>
+    </figure>
+    <figure class="step-fig">
+      <div class="step-no">3</div>
+      <div class="frame"><img loading="lazy" src="assets/mac/3-confirm.webp" alt="macOS confirmation dialog for opening Trakisilo" /></div>
+      <figcaption><b>Confirm.</b> Click Open Anyway, then Open, and enter your password once. After that, Trakisilo opens normally — until the next update.</figcaption>
+    </figure>
+  </div>
+
+  <details class="terminal">
+    <summary>Prefer Terminal? One command.</summary>
+    <div class="brew">
+      <code>xattr -dr com.apple.quarantine /Applications/Trakisilo.app</code>
+      <button class="copy-btn" data-copy="xattr -dr com.apple.quarantine /Applications/Trakisilo.app">Copy</button>
+    </div>
+    <p class="dl-note">Same effect as the steps above — removes the quarantine flag macOS adds to downloads. Only do this for apps you trust (this one is offline — zero network calls).</p>
+  </details>
+</section>
+
+<section id="mac-autopaste">
+  <h2>Turn on auto-paste (optional)</h2>
+  <p class="lead">Quick-paste (<b>⌘⇧V</b>) opens the floating picker from anywhere — no permission needed. To have clips <b>paste into the app you were just in</b>, macOS asks for two permissions, once:</p>
+  <div class="steps">
+    <figure class="step-fig">
+      <div class="step-no">1</div>
+      <div class="frame"><img loading="lazy" src="assets/mac/4-automation.webp" alt="macOS prompt asking to let Trakisilo control System Events" /></div>
+      <figcaption><b>Allow "control System Events".</b> macOS Automation permission — Trakisilo uses it only to send the ⌘V keystroke back to your app.</figcaption>
+    </figure>
+    <figure class="step-fig">
+      <div class="step-no">2</div>
+      <div class="frame"><img loading="lazy" src="assets/mac/5-permission.webp" alt="Trakisilo quick-paste notice offering to open Accessibility settings" /></div>
+      <figcaption><b>If pasting is blocked, macOS asks.</b> Its prompt jumps straight to the right pane — the picker also shows an in-app notice with an Open settings button.</figcaption>
+    </figure>
+    <figure class="step-fig">
+      <div class="step-no">3</div>
+      <div class="frame"><img loading="lazy" src="assets/mac/6-accessibility.webp" alt="Accessibility pane with Trakisilo toggled on" /></div>
+      <figcaption><b>Toggle Trakisilo on in Accessibility.</b> That enables auto-paste for every app. Copy mode (⌘↩ / ⌥-click) needs no permission at all.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="updating">
+  <h2>Updating</h2>
+  <div class="dl-grid">
+    <article class="dl-card"><h3>Windows</h3><p class="dl-meta">Automatic — the Microsoft Store keeps you on the latest release.</p></article>
+    <article class="dl-card"><h3>macOS</h3>
+      <div class="brew"><code>brew upgrade --cask trakisilo</code><button class="copy-btn" data-copy="brew upgrade --cask trakisilo">Copy</button></div>
+      <p class="dl-meta">Or download the DMG again. Because the build is unsigned, macOS may ask for the Open Anyway approval and the Accessibility grant again after an update — the permission is tied to the app's signature.</p>
+    </article>
+  </div>
+</section>
+
+<div class="cta-band">
+  <h2>Works offline. Keeps your data yours.</h2>
+  <div class="cta-row">
+    <a class="cta-win" href="https://apps.microsoft.com/detail/9P67BLH3H7P0"><img class="badge-store" src="assets/ms-badge.svg" alt="Get it from Microsoft" height="48" /></a>
+    <a class="dl-btn cta-mac" href="https://github.com/nkunal1992/Trakisilo-site/releases/latest/download/Trakisilo-macOS-universal.dmg">Download for Mac</a>
+  </div>
+</div>
+
+</main>
+
+<div class="wrap">
+  <footer>
+    <span>© 2026 Narayan Kunal</span>
+    <span>
+      <a href="index.html">Home</a><a href="features.html">Features</a><a href="download.html">Download</a><a href="index.html#faq">FAQ</a><a href="https://apps.microsoft.com/detail/9P67BLH3H7P0">Microsoft Store</a>
+    </span>
+  </footer>
+</div>
+
+<script src="assets/site.js" defer></script>
+</body>
+</html>

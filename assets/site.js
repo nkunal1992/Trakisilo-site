@@ -56,4 +56,47 @@
       document.querySelector(".nav-links").classList.toggle("open");
     });
   }
+
+  // OS-aware download labels (#site). ?os=mac|win|other overrides for testing.
+  (function () {
+    var q = new URLSearchParams(location.search).get("os");
+    var os;
+    if (q === "mac" || q === "win" || q === "other") {
+      os = q;
+    } else {
+      var p = (navigator.userAgentData && navigator.userAgentData.platform) ||
+        navigator.platform || navigator.userAgent || "";
+      p = p.toLowerCase();
+      if (/iphone|ipad|android/.test(p)) os = "other";
+      else if (p.indexOf("mac") >= 0) os = "mac";
+      else if (p.indexOf("win") >= 0) os = "win";
+      else os = "other";
+    }
+    document.documentElement.dataset.os = os;
+    document.querySelectorAll(".nav-dl").forEach(function (a) {
+      if (os === "mac") a.textContent = "Download for Mac";
+      else if (os === "win") a.textContent = "Download for Windows";
+    });
+  })();
+
+  // Copy buttons.
+  document.querySelectorAll(".copy-btn").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var done = function () {
+        var t = b.textContent;
+        b.textContent = "Copied";
+        setTimeout(function () { b.textContent = t; }, 1500);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(b.dataset.copy).then(done).catch(function () {});
+      } else {
+        var ta = document.createElement("textarea");
+        ta.value = b.dataset.copy;
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand("copy"); done(); } catch (e) {}
+        ta.remove();
+      }
+    });
+  });
 })();
