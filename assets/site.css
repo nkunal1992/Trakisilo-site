@@ -221,6 +221,10 @@ section { padding: 72px 0; }
 .faq details p { padding: 0 22px 18px; color: var(--dim); font-size: 15px; max-width: 62ch; }
 
 /* cta band */
+.cta-row {
+  display: flex; align-items: center; justify-content: center;
+  gap: 22px; flex-wrap: wrap;
+}
 .cta-band {
   background: linear-gradient(120deg, rgba(77, 127, 212, 0.22), rgba(78, 214, 140, 0.12));
   border: 1px solid var(--line2); border-radius: 20px;
@@ -274,7 +278,11 @@ footer a:hover { color: var(--text); }
   .feat .row.flip > .copy { order: 0; }
   .tile, .tile.wide { grid-column: span 6; }
   .car-track figure { flex: 0 0 88%; }
-  .band, .cta-band { padding: 40px 24px; }
+  .band, .cta-row {
+  display: flex; align-items: center; justify-content: center;
+  gap: 22px; flex-wrap: wrap;
+}
+.cta-band { padding: 40px 24px; }
 }
 @media (max-width: 760px) {
   footer { flex-direction: column; align-items: center; text-align: center; gap: 12px; }
