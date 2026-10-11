@@ -15,25 +15,21 @@ A="$HERE/assets"
 
 LOOPS_LIST="f-hero f-kanban f-card f-clips f-quickpaste f-time f-calendar f-chronicle f-bdoc f-editor f-process f-search f-themes"
 
-# Per-loop crops + poster moments live in tools/crops.json — the loops are
-# recorded full-window at 1920x1080; cropping into each feature's region
-# keeps the UI legible at the ~400-650px display sizes on the pages.
-read_json() { python3 -c "import json,sys;d=json.load(open('$HERE/tools/crops.json'));v=d[sys.argv[1]][sys.argv[2]];print('' if v is None else v)" "$1" "$2"; }
-
+# Per-loop camera moves live in tools/crops.json as `shots`: keyframes
+# [t,x,y,w] on the 1920x1080 source (h = w*9/16). Each loop starts and ends
+# full-window, easing into each region so the action stays legible at the
+# ~400-650px display sizes on the pages. tools/camera.py emits the -vf.
 for n in $LOOPS_LIST; do
   src="$LOOPS/$n.mp4"; [ -f "$src" ] || { echo "skip $n (missing)"; continue; }
   w=1280; crf=26
   [ "$n" = "f-hero" ] && { w=1600; crf=24; }
   out="$A/v/${n#f-}.mp4"
-  crop=$(read_json "$n" crop)
-  vf="scale=$w:-2"
-  if [ -n "$crop" ]; then
-    IFS=', ' read -r cx cy cw <<<"${crop//[\[\]]/}"
-    ch=$(( cw * 9 / 16 ))
-    vf="crop=$cw:$ch:$cx:$cy,scale=$w:-2"
-  fi
+  vf=$(python3 "$HERE/tools/camera.py" "$n" "$w")
+  end=$(python3 -c "import json;d=json.load(open('$HERE/tools/crops.json'));print(d.get('$n',{}).get('end') or '')")
+  trim=()
+  [ -n "$end" ] && trim=(-t "$end")
   ffmpeg -hide_banner -loglevel error -y -i "$src" \
-    -vf "$vf" -c:v libx264 -preset slow -crf "$crf" \
+    -vf "$vf" "${trim[@]}" -c:v libx264 -preset slow -crf "$crf" \
     -pix_fmt yuv420p -an -movflags +faststart "$out"
 done
 
