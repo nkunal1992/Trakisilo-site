@@ -40,6 +40,15 @@ Env vars on `record-trailer.sh`: `TRAILER_OUT` (output dir), `TRAILER_CAPTIONS=0
 (no baked caption overlay), `TRAILER_KEEP_CHROME=1` (skip the traffic-light
 delogo pass), `E2E_THEME=dark|light` (forces app theme via localStorage).
 
+## macOS download page
+
+`download.html` has `<span data-mac-version|mac-size|mac-sha|mac-date>` markers —
+`../Trakisilo/packaging/release-macos.sh` rewrites them each release; keep the
+`data-*` attributes if you edit the page. Screenshots in `assets/mac/` are real
+Gatekeeper/permission captures (crop from full-screen PNGs via PIL — not the
+e2e pipeline). DMG assets live on GitHub Releases under the stable name
+`Trakisilo-macOS-universal.dmg` so `/releases/latest/download/…` always works.
+
 ## Rules
 
 - Keep the OS cursor off the app window while recording — it gets captured.
