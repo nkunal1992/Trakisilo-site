@@ -18,20 +18,23 @@ git add -A && git commit -m "..." && git push
 All capture tooling lives in the Trakisilo repo (`../Trakisilo`).
 
 ```
-# Loops + hero + tour (dark theme, no captions on loops, no macOS window chrome)
+# Loops + hero + tour, both themes (no captions on loops, no macOS window chrome).
+# Dark records into store-assets/site → assets/{v,p}; light into
+# store-assets/site-light → assets/{v-light,p-light}.
 cd ../Trakisilo
 for n in f-hero f-kanban f-card f-clips f-quickpaste f-time f-calendar \
-         f-chronicle f-bdoc f-editor f-process f-search f-themes; do
+         f-chronicle f-bdoc f-editor f-process f-search f-themes tour; do
   E2E_THEME=dark TRAILER_CAPTIONS=0 TRAILER_OUT=$PWD/store-assets/site \
     TRAILER=$n bash packaging/record-trailer.sh $n
+  E2E_THEME=light TRAILER_CAPTIONS=0 TRAILER_OUT=$PWD/store-assets/site-light \
+    TRAILER=$n bash packaging/record-trailer.sh $n
 done
-E2E_THEME=dark TRAILER_OUT=$PWD/store-assets/site TRAILER=tour \
-  bash packaging/record-trailer.sh tour
 
-# Screenshots (dark)
+# Screenshots (dark; pass light for the light store set)
 E2E_THEME=dark npx wdio run wdio.conf.ts --spec e2e/shots/store-shots.e2e.ts
 
-# Convert + publish into this repo (reads ../Trakisilo/store-assets/{site,dark})
+# Convert + publish into this repo (reads ../Trakisilo/store-assets/
+# {site,site-light,dark})
 cd ../Trakisilo-site
 bash tools/build-assets.sh
 ```
@@ -54,7 +57,12 @@ e2e pipeline). DMG assets live on GitHub Releases under the stable name
 - Keep the OS cursor off the app window while recording — it gets captured.
 - Every capability claim on the site must be verifiable in the app — check code
   or `../Trakisilo/src/lib/guide.tsx` before writing copy.
-- All media is dark theme; loops are silent, 1280px, poster = first frame.
+- Product videos exist in both themes: dark under `assets/{v,p}`, light under
+  `assets/{v-light,p-light}`. Every `<video>` carries `data-src`/`poster`
+  (dark, lazy-loaded) plus `data-src-light`/`data-poster-light`; the
+  `.media-theme` nav toggle in `site.js` swaps them page-wide. Any new video
+  needs both themes and all four attributes.
+- Loops are silent, 1280px, poster = first frame.
 - Links on the site must never point to the private `nkunal1992/Trakisilo` repo.
 - After deploy: `curl -sI` every referenced asset; all must return 200.
 

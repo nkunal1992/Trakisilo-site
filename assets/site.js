@@ -99,4 +99,35 @@
       }
     });
   });
+
+  // Media theme toggle — every product video carries data-src-light /
+  // data-poster-light; the nav toggle swaps sources + posters page-wide
+  // and remembers the choice.
+  var mediaKey = "trak-media-theme";
+  var themed = document.querySelectorAll("video[data-src-light]");
+  themed.forEach(function (v) {
+    v.dataset.srcDark = v.dataset.src || v.getAttribute("src") || "";
+    v.dataset.posterDark = v.getAttribute("poster") || "";
+  });
+  function mediaTheme(t) {
+    themed.forEach(function (v) {
+      var src = t === "light" ? v.dataset.srcLight : v.dataset.srcDark;
+      var poster = t === "light" ? v.dataset.posterLight : v.dataset.posterDark;
+      var playing = !v.paused;
+      if (poster) v.poster = poster;
+      if (v.dataset.src !== undefined) v.dataset.src = src;
+      if (v.getAttribute("src") || v.src) v.src = src;
+      if (playing) v.play().catch(function () {});
+    });
+    document.querySelectorAll(".media-theme button").forEach(function (b) {
+      b.setAttribute("aria-pressed", b.dataset.theme === t ? "true" : "false");
+    });
+    try { localStorage.setItem(mediaKey, t); } catch (e) {}
+  }
+  document.querySelectorAll(".media-theme button").forEach(function (b) {
+    b.addEventListener("click", function () { mediaTheme(b.dataset.theme); });
+  });
+  try {
+    if (localStorage.getItem(mediaKey) === "light") mediaTheme("light");
+  } catch (e) {}
 })();

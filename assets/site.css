@@ -475,3 +475,13 @@ kbd {
   .guide-toc { position: static; max-height: none; }
   .guide-toc details:not([open]) { }
 }
+
+/* ==== Media theme toggle (nav) ==== */
+.media-theme { display: flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.media-theme button {
+  background: none; border: 0; color: var(--text); opacity: .55;
+  font-size: 13px; font-weight: 600; padding: 7px 12px; cursor: pointer; font-family: inherit;
+}
+.media-theme button:hover { opacity: .85; }
+.media-theme button[aria-pressed="true"] { background: var(--card2); opacity: 1; }
+@media (max-width: 760px) { .media-theme { display: none; } }
