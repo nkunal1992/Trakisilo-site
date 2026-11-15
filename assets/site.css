@@ -416,3 +416,62 @@ html[data-os="mac"] .hero-cta .cta-mac, html[data-os="mac"] .cta-row .cta-mac { 
   font-size: 12px; font-weight: 600; padding: 5px 12px; border-radius: 6px;
   background: rgba(111,156,240,.14); color: #6f9cf0; white-space: nowrap;
 }
+
+/* ==== User guide ==== */
+.guide-hero { padding: 64px 0 12px; }
+.guide-hero h1 { font-size: clamp(34px, 5vw, 52px); margin: 8px 0 14px; }
+.guide-hero .lede { max-width: 68ch; font-size: 17px; color: var(--dim); }
+kbd {
+  font: inherit; font-size: .85em; font-weight: 600; white-space: nowrap;
+  padding: 2px 7px; border-radius: 6px; border: 1px solid var(--line2);
+  background: var(--card2); color: var(--text);
+  box-shadow: 0 1px 0 var(--line);
+}
+.guide-layout { display: grid; grid-template-columns: 250px 1fr; gap: 40px; padding-bottom: 60px; }
+.guide-toc { position: sticky; top: 84px; align-self: start; max-height: calc(100vh - 110px); overflow-y: auto; font-size: 14px; }
+.guide-toc details { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+.guide-toc summary { cursor: pointer; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--dim); }
+.guide-toc ol, .guide-toc ul { list-style: none; margin: 10px 0 0; padding: 0; }
+.guide-toc > details > ol > li { margin-top: 10px; }
+.guide-toc > details > ol > li > a { font-weight: 600; color: var(--text); }
+.guide-toc ul { margin: 4px 0 4px 12px; display: grid; gap: 3px; }
+.guide-toc ul a { color: var(--dim); }
+.guide-toc a:hover { color: var(--blue); }
+.guide-toc a { text-decoration: none; }
+
+.g-sec { margin-top: 56px; scroll-margin-top: 84px; }
+.g-sec > h2 { display: flex; align-items: center; gap: 12px; font-size: 28px; margin: 0 0 10px; }
+.g-icon {
+  width: 38px; height: 38px; border-radius: 10px; flex: none;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--card2); border: 1px solid var(--line2);
+  font-size: 18px; color: var(--blue);
+}
+.g-intro { color: var(--dim); max-width: 70ch; font-size: 15.5px; margin: 0 0 18px; }
+.g-entry {
+  background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+  padding: 20px 22px; margin-top: 14px; scroll-margin-top: 84px;
+}
+.g-entry h3 { margin: 0 0 12px; font-size: 18px; }
+.g-entry p { margin: 0 0 10px; font-size: 15px; line-height: 1.6; color: var(--dim); }
+.g-label { color: var(--blue); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: .07em; }
+.g-steps { margin: 10px 0 4px; padding-left: 22px; color: var(--dim); font-size: 15px; line-height: 1.65; }
+.g-steps li { margin: 3px 0; }
+.g-tip {
+  margin: 12px 0 0 !important; padding: 10px 14px;
+  border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0;
+  background: rgba(79, 127, 212, .08);
+}
+.sc-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 6px 22px; }
+.sc-row { display: flex; align-items: baseline; gap: 10px; padding: 7px 0; border-bottom: 1px solid var(--line); font-size: 14.5px; color: var(--dim); }
+.sc-row kbd:first-child { flex: none; }
+.sc-row > span { flex: 1; }
+.tips-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+.tip-card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; }
+.tip-card p { margin: 0; font-size: 14.5px; line-height: 1.55; color: var(--dim); }
+
+@media (max-width: 900px) {
+  .guide-layout { grid-template-columns: 1fr; }
+  .guide-toc { position: static; max-height: none; }
+  .guide-toc details:not([open]) { }
+}

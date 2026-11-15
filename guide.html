@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>User Guide — Trakisilo</title>
+<meta name="description" content="The complete Trakisilo user guide: boards and cards, documents, rich editing, clips and quick paste, time tracking, processes, chronicle journals, settings — every feature, every shortcut." />
+<link rel="canonical" href="https://nkunal1992.github.io/Trakisilo-site/guide.html" />
+<link rel="icon" type="image/png" href="icon.png" />
+<meta property="og:title" content="Trakisilo User Guide — every feature, explained" />
+<meta property="og:description" content="Boards, docs, clips, time tracking, processes, and chronicle — a section per feature with how-tos, steps, tips, and shortcuts." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nkunal1992.github.io/Trakisilo-site/guide.html" />
+<meta property="og:image" content="https://nkunal1992.github.io/Trakisilo-site/assets/og.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="stylesheet" href="assets/site.css" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Trakisilo User Guide","description":"Complete user guide for Trakisilo: boards and cards, board documents, rich editing, clips and quick paste, time tracking, processes, chronicle journals, and settings.","author":{"@type":"Person","name":"Narayan Kunal"},"about":{"@type":"SoftwareApplication","name":"Trakisilo"}}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<nav><div class="wrap">
+  <a class="brand" href="index.html"><img src="icon.png" alt="" width="28" height="28" />Trakisilo</a>
+  <div class="nav-links" id="navlinks">
+    <a href="index.html">Home</a>
+    <a href="features.html">Features</a>
+    <a href="guide.html" class="on">Guide</a>
+  </div>
+  <div class="nav-cta">
+    <a class="nav-dl" href="download.html">Download</a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+  </div>
+</div></nav>
+
+<main id="main">
+<header class="guide-hero wrap">
+  <p class="eyebrow">User guide</p>
+  <h1>Every feature, explained.</h1>
+  <p class="lede">One section per part of Trakisilo — what it does, how to use it, step-by-step workflows, tips, and every keyboard shortcut. Everything here matches the app: the same guide lives inside Trakisilo behind <kbd>?</kbd>.</p>
+</header>
+
+<div class="wrap guide-layout">
+<nav class="guide-toc" aria-label="Guide contents"><details open><summary>On this page</summary><ol>  <li><a href="#getting-around">Getting around</a><ul>
+    <li><a href="#views">Views</a></li>
+    <li><a href="#command-palette">Command palette</a></li>
+    <li><a href="#global-search">Global search</a></li>
+    <li><a href="#notifications">Notifications</a></li>
+    <li><a href="#sidebar">Sidebar</a></li>
+    <li><a href="#card-details">Card details</a></li>
+    <li><a href="#right-click">Right-click</a></li>
+    <li><a href="#drag-drop">Drag &amp; drop</a></li>
+  </ul></li>
+  <li><a href="#board-cards">Board &amp; cards</a><ul>
+    <li><a href="#cards">Cards</a></li>
+    <li><a href="#comments-attachments">Comments &amp; attachments</a></li>
+    <li><a href="#columns">Columns</a></li>
+    <li><a href="#upcoming-rail">Upcoming rail</a></li>
+    <li><a href="#archived-items">Archived items</a></li>
+    <li><a href="#exports">Exports</a></li>
+  </ul></li>
+  <li><a href="#board-documents">Board documents</a><ul>
+    <li><a href="#board-docs">Board docs</a></li>
+    <li><a href="#board-brief">Board brief</a></li>
+    <li><a href="#tabs">Tabs</a></li>
+    <li><a href="#feed-filters-sorting-day-groups">Feed filters, sorting &amp; day groups</a></li>
+    <li><a href="#drafts-follow-you">Drafts follow you</a></li>
+    <li><a href="#archive-copy">Archive &amp; copy</a></li>
+  </ul></li>
+  <li><a href="#rich-editing">Rich editing</a><ul>
+    <li><a href="#block-menu">Block menu</a></li>
+    <li><a href="#toggles-outliner">Toggles &amp; outliner</a></li>
+    <li><a href="#code-diagrams">Code &amp; diagrams</a></li>
+    <li><a href="#mentions-references">Mentions &amp; references</a></li>
+    <li><a href="#smart-paste">Smart paste</a></li>
+    <li><a href="#marks-colors">Marks &amp; colors</a></li>
+  </ul></li>
+  <li><a href="#clips-quick-paste">Clips &amp; Quick Paste</a><ul>
+    <li><a href="#clips">Clips</a></li>
+    <li><a href="#quick-paste">Quick paste</a></li>
+    <li><a href="#paste-menus-tray">Paste menus &amp; tray</a></li>
+    <li><a href="#organize">Organize</a></li>
+  </ul></li>
+  <li><a href="#time-leave">Time &amp; Leave</a><ul>
+    <li><a href="#tracker">Tracker</a></li>
+    <li><a href="#timesheet">Timesheet</a></li>
+    <li><a href="#reports">Reports</a></li>
+    <li><a href="#leave-days">Leave days</a></li>
+  </ul></li>
+  <li><a href="#processes">Processes</a><ul>
+    <li><a href="#templates">Templates</a></li>
+    <li><a href="#runs">Runs</a></li>
+  </ul></li>
+  <li><a href="#chronicle">Chronicle</a><ul>
+    <li><a href="#chronicles">Chronicles</a></li>
+    <li><a href="#chronicle-sections">Chronicle sections</a></li>
+  </ul></li>
+  <li><a href="#data-sandbox-settings">Data, sandbox &amp; settings</a><ul>
+    <li><a href="#local-first-storage">Local-first storage</a></li>
+    <li><a href="#backup-restore">Backup &amp; restore</a></li>
+    <li><a href="#recently-deleted">Recently deleted</a></li>
+    <li><a href="#demo-sandbox">Demo sandbox</a></li>
+    <li><a href="#appearance-shortcuts">Appearance &amp; shortcuts</a></li>
+  </ul></li>
+  <li><a href="#shortcuts">Keyboard shortcuts</a></li>
+  <li><a href="#pro-tips">Pro tips</a></li>
+</ol></details></nav>
+
+<div class="guide-body">
+<section class="g-sec" id="getting-around"><h2><span class="g-icon">🧭</span>Getting around</h2><p class="g-intro">Trakisilo is organized as views on a left activity rail, with a board rail inside the Board view. Everything below is chrome — learn it once and every view works the same way.</p><article class="g-entry" id="views">
+  <h3>Views</h3>
+  <p><span class="g-label">What it does.</span> Board, Chronicle, Clips, Calendar, Time, Processes — icons in the activity rail on the left. Settings and Help sit at the rail&#x27;s bottom.</p>
+  <p><span class="g-label">How to use it.</span> Click a rail icon, or jump via ⌘K.</p>
+</article>
+<article class="g-entry" id="command-palette">
+  <h3>Command palette</h3>
+  <p><span class="g-label">What it does.</span> Jump to any board, card, clip, chronicle, doc, or process — and run actions like new card, new clip, new chronicle, or start/stop the timer. Your last few picks sit in a Recent group when the box is empty.</p>
+  <p><span class="g-label">How to use it.</span> Press ⌘K anywhere.</p>
+  <p class="g-tip"><span class="g-label">Tip.</span> Type a few letters of anything — the palette fuzzy-finds it.</p>
+</article>
+<article class="g-entry" id="global-search">
+  <h3>Global search</h3>
+  <p><span class="g-label">What it does.</span> Search cards, clips, comments, board docs, and chronicle entries across the whole workspace.</p>
+  <p><span class="g-label">How to use it.</span> The search box at the top right — click or press ⌘K and type.</p>
+</article>
+<article class="g-entry" id="notifications">
+  <h3>Notifications</h3>
+  <p><span class="g-label">What it does.</span> Overdue and upcoming due cards from every board, plus a shortcut to the running timer.</p>
+  <p><span class="g-label">How to use it.</span> The bell at the bottom of the activity rail — the badge counts cards due today or already overdue.</p>
+  <p class="g-tip"><span class="g-label">Tip.</span> Click a card to open it; set due dates on cards to feed the list.</p>
+</article>
+<article class="g-entry" id="sidebar">
+  <h3>Sidebar</h3>
+  <p><span class="g-label">What it does.</span> Boards and board groups — your workspace outline.</p>
+  <p><span class="g-label">How to use it.</span> Drag boards to reorder or into groups; drag group headers to rearrange.</p>
+  <p class="g-tip"><span class="g-label">Tip.</span> Inbox is the default board — it can&#x27;t be deleted, everything else can.</p>
+</article>
+<article class="g-entry" id="card-details">
+  <h3>Card details</h3>
+  <p><span class="g-label">What it does.</span> Clicking a card opens its full detail — title, description, checklist, labels, comments, attachments.</p>
+  <p><span class="g-label">How to use it.</span> Details open docked on the right or centered as a dialog — pick your preference in Settings → Appearance.</p>
+</article>
+<article class="g-entry" id="right-click">
+  <h3>Right-click</h3>
+  <p><span class="g-label">What it does.</span> Context menus live on almost everything — cards, chips, tabs, days, rows, doc entries.</p>
+  <p><span class="g-label">How to use it.</span> Right-click (or Ctrl-click) to see what a thing can do.</p>
+</article>
+<article class="g-entry" id="drag-drop">
+  <h3>Drag &amp; drop</h3>
+  <p><span class="g-label">What it does.</span> Reorder cards, columns (⋮⋮ grip), boards, tabs, and reschedule due dates.</p>
+  <p><span class="g-label">How to use it.</span> Drag — a line or highlight marks where it lands.</p>
+</article></section>
+<section class="g-sec" id="board-cards"><h2><span class="g-icon">🗂</span>Board &amp; cards</h2><p class="g-intro">The Board view is a kanban workspace: cards live in columns on boards, grouped into board groups. Cards carry the work — details, checklist, comments, attachments — while columns and groups carry the structure.</p><article class="g-entry" id="cards">
+  <h3>Cards</h3>
+  <p><span class="g-label">What it does.</span> Tasks with rich descriptions, comments, attachments, labels, due dates, subtasks, and estimates.</p>
+  <p><span class="g-label">How to use it.</span> Add a card with the column&#x27;s + button, or paste a list for bulk add. Click a card for the full dialog — the Links row ties related cards together. Right-click → Card color tints the card; Duplicate clones it. Move To → another board&#x27;s name moves a card (with its subtasks) to that board. The toolbar&#x27;s done/total chip opens a per-column breakdown. Double-click a column&#x27;s name to rename it.</p>
+  <p class="g-tip"><span class="g-label">Tip.</span> Type #tag in a card title to attach (or create) that label. Paste a multi-line list into an add-card input to create a card per line — works for subtasks too.</p>
+</article>
+<article class="g-entry" id="comments-attachments">
+  <h3>Comments &amp; attachments</h3>
+  <p><span class="g-label">What it does.</span> Every card has a comment thread with the full rich editor, plus file attachments — images open in a zoomable lightbox.</p>
+  <p><span class="g-label">How to use it.</span> Open a card → Comments or Attachments. Comments autosave a draft per card.</p>
+</article>
+<article class="g-entry" id="columns">
+  <h3>Columns</h3>
+  <p><span class="g-label">What it does.</span> Columns own a color accent and an order.</p>
+  <p><span class="g-label">How to use it.</span> Rename via the column menu; drag the ⋮⋮ grip to reorder.</p>
+</article>
+<article class="g-entry" id="upcoming-rail">
+  <h3>Upcoming rail</h3>
+  <p><span class="g-label">What it does.</span> Everything due soon or overdue, across all boards.</p>
+  <p><span class="g-label">How to use it.</span> Toggle the right rail from the board toolbar — red = overdue.</p>
+</article>
+<article class="g-entry" id="archived-items">
+  <h3>Archived items</h3>
+  <p><span class="g-label">What it does.</span> Done-for-good cards leave the board but never vanish — browse and restore them from the Archived view.</p>
+  <p><span class="g-label">How to use it.</span> Sidebar → Archived.</p>
+</article>
+<article class="g-entry" id="exports">
+  <h3>Exports</h3>
+  <p><span class="g-label">What it does.</span> Board CSV export for spreadsheets and sharing.</p>
+  <p><span class="g-label">How to use it.</span> Board context menu → Export CSV… lands in ~/Downloads.</p>
+</article></section>
+<section class="g-sec" id="board-documents"><h2><span class="g-icon">📄</span>Board documents</h2><p class="g-intro">Each board has an Overview surface: a brief at the top and a list of long-form documents underneath — decisions, designs, research — that live next to the cards they describe.</p><article class="g-entry" id="board-docs">
+  <h3>Board docs</h3>
+  <p><span class="g-label">What it does.</span> Rich documents per board — briefs, decisions, designs, research. Each doc is a feed of typed entries with comments.</p>
+  <p><span class="g-label">How to use it.</span> Open a board → switch to the Overview surface → ＋ New doc in the docs rail.</p>
+  <ol class="g-steps">
+    <li>Open a board and click the Docs rail</li>
+    <li>New document → give it a title</li>
+    <li>Pick an entry kind and write — every rich block works here</li>
+    <li>Add comments on entries, link work items, pin or archive the doc</li>
+    <li>Export → Markdown to share a doc as a file</li>
+  </ol>
+  <p class="g-tip"><span class="g-label">Tip.</span> Entries carry a kind chip (note/decision/design/discussion/research); comments open in a popup — the count pill or the chat icon on any entry.</p>
+</article>
+<article class="g-entry" id="board-brief">
+  <h3>Board brief</h3>
+  <p><span class="g-label">What it does.</span> A standing description of the board&#x27;s mission — always one click away.</p>
+  <p><span class="g-label">How to use it.</span> Board → Overview surface → Brief card at the top. Edit inline and save.</p>
+</article>
+<article class="g-entry" id="tabs">
+  <h3>Tabs</h3>
+  <p><span class="g-label">What it does.</span> Organize a doc&#x27;s entries into named sections — Research, Decisions, anything. Entries move between tabs; removing a tab sends its entries back to General, nothing is lost.</p>
+  <p><span class="g-label">How to use it.</span> The tab row above the entries — + creates a tab, right-click a tab to rename, reorder, or remove it. The folder icon on an entry moves it.</p>
+  <ol class="g-steps">
+    <li>Click + on the tab row and name the section</li>
+    <li>New entries post into whichever tab is selected</li>
+    <li>Move entries via the folder icon on each card</li>
+    <li>Right-click a tab → Remove: entries land in General</li>
+  </ol>
+  <p class="g-tip"><span class="g-label">Tip.</span> All entries shows every section together (read-only). Each tab keeps its own draft.</p>
+</article>
+<article class="g-entry" id="feed-filters-sorting-day-groups">
+  <h3>Feed filters, sorting &amp; day groups</h3>
+  <p><span class="g-label">What it does.</span> Long feeds stay readable: filter by entry kind or text, sort by date, edit recency, comment count, or entry type, and entries group under Today / Yesterday / date headers.</p>
+  <p><span class="g-label">How to use it.</span> The chip row, search box, and sort menu above any doc or chronicle feed. The sort is remembered per doc and chronicle.</p>
+</article>
+<article class="g-entry" id="drafts-follow-you">
+  <h3>Drafts follow you</h3>
+  <p><span class="g-label">What it does.</span> Half-written entries are kept per doc and per chronicle — switch away and come back, your text is still there.</p>
+  <p><span class="g-label">How to use it.</span> Just type; the draft persists until you post or clear it.</p>
+</article>
+<article class="g-entry" id="archive-copy">
+  <h3>Archive &amp; copy</h3>
+  <p><span class="g-label">What it does.</span> Docs and chronicles archive instead of deleting; entries copy their text to the clipboard in one click.</p>
+  <p><span class="g-label">How to use it.</span> Doc ⋮ menu → Archive; rail → Show archived. Copy is the icon on any entry.</p>
+</article></section>
+<section class="g-sec" id="rich-editing"><h2><span class="g-icon">✎</span>Rich editing</h2><p class="g-intro">Card descriptions, board docs, and chronicle entries all use the same block editor. Type / for the block menu, select blocks to turn them into something else, or just paste — the editor figures out tables, diagrams, and formatting.</p><article class="g-entry" id="block-menu">
+  <h3>Block menu</h3>
+  <p><span class="g-label">What it does.</span> Every rich block lives in one menu: Callout, Toggle, Contents, Divider with label, Status pill, Key-value block, Timeline, Diagram, Visual diagram, Inline math, AsciiMath formula, File attachment, Bullet list, Numbered list, Checklist, Code block, Quote, Table, and Divider.</p>
+  <p><span class="g-label">How to use it.</span> Type / at the start of a line or after a space mid-sentence, or click the ＋ in the toolbar — then pick a block.</p>
+  <ol class="g-steps">
+    <li>Click into any entry or comment composer</li>
+    <li>Type / and pick a block (or use the ＋ button)</li>
+    <li>Fill it in — ⌘⏎ saves the whole entry</li>
+  </ol>
+  <p class="g-tip"><span class="g-label">Tip.</span> The / menu converts the line you&#x27;re on — type a title first, then /toggle to make it the toggle&#x27;s title.</p>
+</article>
+<article class="g-entry" id="toggles-outliner">
+  <h3>Toggles &amp; outliner</h3>
+  <p><span class="g-label">What it does.</span> Collapsible rows that nest — Enter makes a sibling row, Tab indents under the row above, Shift-Tab or Backspace lifts back out.</p>
+  <p><span class="g-label">How to use it.</span> Insert a Toggle, type a title, then drive with Enter / Tab / Shift-Tab / Backspace like an outliner.</p>
+</article>
+<article class="g-entry" id="code-diagrams">
+  <h3>Code &amp; diagrams</h3>
+  <p><span class="g-label">What it does.</span> Syntax-highlighted code blocks with a language picker, plus mermaid diagrams and AsciiMath formulas that render live. Inline math chips flow inside sentences, list items and table cells.</p>
+  <p><span class="g-label">How to use it.</span> /visual opens a drag-and-drop canvas editor — pick a template (hub-and-spoke, flowchart, org chart, network topology, multi-step process, sequence) or start blank; blank drops a starter box already in typing mode and Tab adds the next connected box. Add shapes three ways: click a palette shape to place it (connected beside the selection), drag it onto the canvas, or double-click empty canvas for a box. Type directly into a selected box — Enter adds a new line, ⌘⏎ or clicking away commits; hover a box&#x27;s + dots for a ghost preview, click to spawn a connected copy, or drag a dot onto another box to draw an arrow (drop on empty canvas for a shape picker). The palette&#x27;s Arrow button opens a flyout of connector presets — arrow, both-ends, plain line, straight, curved — pick one and drag between boxes (or grab a line anywhere and pull to bend it, drag an endpoint dot onto any box to reconnect, double-click the line to label it, or insert a box mid-arrow). Selecting a line gives a floating bar with connector-type buttons (straight/elbow/curved), head presets (none/end/start/both), colour and line style; the ⋯ row adds per-end head shapes, thickness and dotted lines. The compact style bar anchors beside the selection — shape, fill, text — with a ⋯ popover for opacity, border and alignment; press ? in the editor for the shortcut sheet (⌘C/⌘V/⌘X, ⌘D, Alt-drag duplicate, Shift-drag marquee, arrows nudge). Layout + direction controls auto-arrange; diagrams render inline with the app theme. /diagram (mermaid) or /asciimath shows a picker — diagram types (flowchart, sequence, containers…) or starter formulas (quadratic, sum, integral, matrix) — each seeds working syntax you can edit. The ? chip on a block opens a syntax hints popup; click a snippet to insert it at the caret. For a formula inside a sentence, type $x^2$ or /math or select text and click √x. Diagrams also drop inside bullet items, numbered items and table cells — they land under the cell&#x27;s or item&#x27;s text, never replacing it.</p>
+  <p class="g-tip"><span class="g-label">Tip.</span> Pasting diagram source offers &#x27;Insert as diagram?&#x27; — one click to render it.</p>
+</article>
+<article class="g-entry" id="mentions-references">
+  <h3>Mentions &amp; references</h3>
+  <p><span class="g-label">What it does.</span> Mention a work item with @ — it becomes a chip with a live status dot that opens the card when clicked.</p>
+  <p><span class="g-label">How to use it.</span> Type @ in a composer and pick a card.</p>
+</article>
+<article class="g-entry" id="smart-paste">
+  <h3>Smart paste</h3>
+  <p><span class="g-label">What it does.</span> Pasted tables, mermaid source, preformatted text and literal HTML markup are recognized — preview and insert them properly, or keep as text. Pasted HTML is sanitized (scripts, embeds and remote content are stripped) and becomes editable native content.</p>
+  <p><span class="g-label">How to use it.</span> Paste — a small dialog asks how to handle it when the content is detected. For HTML you can insert formatted, keep it as an HTML code block, or keep it as plain text.</p>
+</article>
+<article class="g-entry" id="marks-colors">
+  <h3>Marks &amp; colors</h3>
+  <p><span class="g-label">What it does.</span> Bold, italic, strikethrough, ==highlight==, text color, font, alignment, links, and date tokens.</p>
+  <p><span class="g-label">How to use it.</span> The toolbar above the composer keeps inline formatting only; highlight is the ▨ button (⌘⇧H). Lists, checklists, code, quotes and tables live in the / menu (or select text → Turn into).</p>
+</article></section>
+<section class="g-sec" id="clips-quick-paste"><h2><span class="g-icon">📋</span>Clips &amp; Quick Paste</h2><p class="g-intro">Clips is a vault for text you reuse: boards → tabs → panels → clips. Nothing is captured in the background — you save exactly what you choose — and the global quick-paste shortcut brings it to any app.</p><article class="g-entry" id="clips">
+  <h3>Clips</h3>
+  <p><span class="g-label">What it does.</span> Saved snippets — text, code (with language), links, files, images, templates, forms.</p>
+  <p><span class="g-label">How to use it.</span> Tabs → panels → clips. Click a chip to edit it; right-click for copy, pin, menus, and more.</p>
+  <p class="g-tip"><span class="g-label">Tip.</span> Pin frequent clips; mark secrets — they stay masked until revealed.</p>
+</article>
+<article class="g-entry" id="quick-paste">
+  <h3>Quick paste</h3>
+  <p><span class="g-label">What it does.</span> A floating picker that pastes a clip into whatever app you&#x27;re in — even when Trakisilo isn&#x27;t focused.</p>
+  <p><span class="g-label">How to use it.</span> Press ⌘⇧V from anywhere. The shortcut is configurable in Settings → General → Quick-paste shortcut.</p>
+  <ol class="g-steps">
+    <li>Save a clip in Clips</li>
+    <li>In any app, press the quick-paste shortcut</li>
+    <li>Type a few letters to filter, Enter to paste</li>
+    <li>Change the combo in Settings if it clashes with another app</li>
+    <li>On macOS, auto-paste needs Accessibility permission — the picker links straight to the setting (copy mode works without it)</li>
+  </ol>
+</article>
+<article class="g-entry" id="paste-menus-tray">
+  <h3>Paste menus &amp; tray</h3>
+  <p><span class="g-label">What it does.</span> Curated clip menus for instant pasting from the menu bar. Menus can be reordered — the first one feeds the tray.</p>
+  <p><span class="g-label">How to use it.</span> Clips ⋮ → Paste menus — they feed the tray icon. The editor&#x27;s menu strip reorders them (first = tray). Closing the window keeps Trakisilo running in the tray — use the tray&#x27;s Open/Restart/Quit to manage it.</p>
+</article>
+<article class="g-entry" id="organize">
+  <h3>Organize</h3>
+  <p><span class="g-label">What it does.</span> Drag-reorder chips, panels, and tabs.</p>
+  <p><span class="g-label">How to use it.</span> ⋮ → Organize to enter drag mode.</p>
+</article></section>
+<section class="g-sec" id="time-leave"><h2><span class="g-icon">⏱</span>Time &amp; Leave</h2><p class="g-intro">Time tracking is tied to your cards: start a timer on the card you&#x27;re working on, or log time by hand. The Time view rolls it up into weekly timesheets and reports, and Leave keeps non-working days out of the math.</p><article class="g-entry" id="tracker">
+  <h3>Tracker</h3>
+  <p><span class="g-label">What it does.</span> Running timer tied to a card or project — a pill follows you across views.</p>
+  <p><span class="g-label">How to use it.</span> ▶ on a card, in the Time view, or ⌘K → Start timer.</p>
+</article>
+<article class="g-entry" id="timesheet">
+  <h3>Timesheet</h3>
+  <p><span class="g-label">What it does.</span> Weekly grid — log time directly into day cells. Entries spanning midnight credit each day its share.</p>
+  <p><span class="g-label">How to use it.</span> Click a cell to log; identical entries collapse into ×N groups.</p>
+</article>
+<article class="g-entry" id="reports">
+  <h3>Reports</h3>
+  <p><span class="g-label">What it does.</span> Totals, per-project share, and 14-day bars.</p>
+  <p><span class="g-label">How to use it.</span> Time view → Reports tab; CSV export available.</p>
+</article>
+<article class="g-entry" id="leave-days">
+  <h3>Leave days</h3>
+  <p><span class="g-label">What it does.</span> Mark a day as leave — hatched on the calendar, 🌴 header on the timesheet.</p>
+  <p><span class="g-label">How to use it.</span> Right-click a calendar day or a timesheet day head → Mark as Leave.</p>
+</article></section>
+<section class="g-sec" id="processes"><h2><span class="g-icon">⚙</span>Processes</h2><p class="g-intro">Processes are reusable checklists: build a template once — release steps, onboarding, a packing list — then run it as many times as you need, with notes and history on every run.</p><article class="g-entry" id="templates">
+  <h3>Templates</h3>
+  <p><span class="g-label">What it does.</span> Reusable checklists — your gold standard for repeat work, with phases, form fields, conditional steps, and pitfalls.</p>
+  <p><span class="g-label">How to use it.</span> Processes → New process (wizard) or start from a starter template.</p>
+</article>
+<article class="g-entry" id="runs">
+  <h3>Runs</h3>
+  <p><span class="g-label">What it does.</span> Execute a template: tick steps, add notes, verify, pause/resume.</p>
+  <p><span class="g-label">How to use it.</span> Pick a process → ▶ Run. Every run is saved to history.</p>
+  <p class="g-tip"><span class="g-label">Tip.</span> Stop steps block progress until done — use them for gates like sign-offs.</p>
+</article></section>
+<section class="g-sec" id="chronicle"><h2><span class="g-icon">🧵</span>Chronicle</h2><p class="g-intro">Chronicle is a typed, append-only journal for each board — notes, releases, decisions, risks. Sections split a long journal into named parts, and feeds with filters and sorting keep it readable as it grows.</p><article class="g-entry" id="chronicles">
+  <h3>Chronicles</h3>
+  <p><span class="g-label">What it does.</span> Append-only topic logs — releases, decisions, risks — as a dated timeline with comments on each entry.</p>
+  <p><span class="g-label">How to use it.</span> Create a chronicle in the left rail, pick an entry type, write, Add entry.</p>
+  <ol class="g-steps">
+    <li>Rail → + to create a chronicle</li>
+    <li>Pick a type chip (note/release/decision/risk) and write an entry</li>
+    <li>Comment on entries, filter and sort the feed, archive when the topic closes</li>
+    <li>Export → Markdown from the chronicle menu</li>
+  </ol>
+  <p class="g-tip"><span class="g-label">Tip.</span> Entry types are editable later via Edit; comments open in a popup — the count pill or the chat icon on any entry.</p>
+</article>
+<article class="g-entry" id="chronicle-sections">
+  <h3>Chronicle sections</h3>
+  <p><span class="g-label">What it does.</span> Split a chronicle&#x27;s timeline into named sections — Decisions, Incidents, follow-ups. All entries still shows the whole log; each section keeps its own draft.</p>
+  <p><span class="g-label">How to use it.</span> Sections nest under the chronicle&#x27;s row in the left rail — click to filter the page. ＋ New section creates one; right-click a section to rename, reorder, or delete it. Deleting returns its entries to General.</p>
+</article></section>
+<section class="g-sec" id="data-sandbox-settings"><h2><span class="g-icon">💾</span>Data, sandbox &amp; settings</h2><p class="g-intro">Everything lives in a local SQLite file plus an attachments folder — no account, no sync, no telemetry. Back it up, restore it, try the throwaway demo sandbox, and make it look like yours.</p><article class="g-entry" id="local-first-storage">
+  <h3>Local-first storage</h3>
+  <p><span class="g-label">What it does.</span> One local SQLite database + an attachments folder — no account, no cloud, works offline.</p>
+  <p><span class="g-label">How to use it.</span> Settings → General explains the layout; everything lives under app data.</p>
+</article>
+<article class="g-entry" id="backup-restore">
+  <h3>Backup &amp; restore</h3>
+  <p><span class="g-label">What it does.</span> Snapshot the database + attachments to a folder you choose; restore replaces the workspace (after auto-backing-up).</p>
+  <p><span class="g-label">How to use it.</span> Settings → Data → Backup / Import backup.</p>
+  <ol class="g-steps">
+    <li>Settings → Data → Backup → pick a folder</li>
+    <li>Restoring? Import backup — the app snapshots current data first, then swaps in the backup</li>
+  </ol>
+</article>
+<article class="g-entry" id="recently-deleted">
+  <h3>Recently deleted</h3>
+  <p><span class="g-label">What it does.</span> Deleted cards and clips sit here for 30 days — restore them in full (subtasks, comments, attachments) or purge them early.</p>
+  <p><span class="g-label">How to use it.</span> Settings → Recently deleted → ↩ restores, 🗑 deletes forever.</p>
+</article>
+<article class="g-entry" id="demo-sandbox">
+  <h3>Demo sandbox</h3>
+  <p><span class="g-label">What it does.</span> A throwaway workspace where the app drives itself — boards, docs, clips, chronicles, time, processes.</p>
+  <p><span class="g-label">How to use it.</span> Settings → Guide → Run the demo. Pick a pace (🐢 Relaxed · 🚶 Normal · ⚡ Fast); ←/→ step manually, Space pauses. Exit via the pill — real data is untouched.</p>
+</article>
+<article class="g-entry" id="appearance-shortcuts">
+  <h3>Appearance &amp; shortcuts</h3>
+  <p><span class="g-label">What it does.</span> Theme (system/dark/light), accent hue, background preset, ambience (Rich/Calm), contrast, text size — and the quick-paste shortcut is yours to change.</p>
+  <p><span class="g-label">How to use it.</span> Settings → Appearance, or ⌘K → theme commands. The quick-paste combo lives in Settings → General.</p>
+</article></section>
+
+<section class="g-sec" id="shortcuts">
+<h2><span class="g-icon">⌘</span>Keyboard shortcuts</h2>
+<p class="g-intro">Global shortcuts work anywhere in the app; editor shortcuts work wherever you're writing. On Windows, <kbd>Ctrl</kbd> replaces <kbd>⌘</kbd> and <kbd>Ctrl+Alt</kbd> replaces <kbd>⌘⌥</kbd>.</p>
+<div class="sc-list"><div class="sc-row"><kbd>⌘K</kbd><span>Command palette — jump to anything, run actions</span></div><div class="sc-row"><kbd>⌘N</kbd><span>New card — jumps to the board&#x27;s add-card input</span></div><div class="sc-row"><kbd>⌘\\\\</kbd><span>Toggle the board sidebar</span></div><div class="sc-row"><kbd>⌘⇧V</kbd><span>Quick paste — clip picker, works from any app (rebindable)</span></div><div class="sc-row"><kbd>?</kbd><span>This help panel</span></div><div class="sc-row"><kbd>⌘⏎</kbd><span>Save — entry, comment, or editor</span></div><div class="sc-row"><kbd>⌘S</kbd><span>Save the clip being edited</span></div><div class="sc-row"><kbd>⌘⇧D</kbd><span>Insert the current date (composer)</span></div><div class="sc-row"><kbd></kbd> <kbd></kbd><span>Block menu — callouts, toggles, tables, diagrams…</span></div><div class="sc-row"><kbd>@</kbd><span>Mention a work item — live status chip</span></div><div class="sc-row"><kbd>⌘⇧H</kbd><span>Highlight the selected text</span></div><div class="sc-row"><kbd>⌘⌥1–3</kbd><span>Turn the block into a heading (H1–H3)</span></div><div class="sc-row"><kbd>⌘⇧B</kbd><span>Turn the block into a quote</span></div><div class="sc-row"><kbd>⌘⌥C</kbd><span>Turn the block into a code block</span></div><div class="sc-row"><kbd>⌘⇧8</kbd> <kbd>⌘⇧9</kbd><span>Bullet / numbered list</span></div><div class="sc-row"><kbd>⌘⌥T</kbd> <kbd>⌘⌥O</kbd><span>Toggle / callout — wraps the selected blocks</span></div><div class="sc-row"><kbd>⌘⌥⇧T</kbd><span>Toggle each line — one collapsible row per selected line</span></div><div class="sc-row"><kbd>⌘⌥0</kbd><span>Back to a plain paragraph</span></div><div class="sc-row"><kbd>Esc</kbd><span>Close dialog / menu / palette</span></div><div class="sc-row"><kbd>Right-click</kbd><span>Context menu on cards, chips, tabs, days, rows</span></div><div class="sc-row"><kbd>Double-click</kbd><span>Add a card (board column, calendar day)</span></div><div class="sc-row"><kbd>Drag</kbd><span>Reorder anything — a line marks the drop point</span></div></div>
+</section>
+
+<section class="g-sec" id="pro-tips">
+<h2><span class="g-icon">★</span>Pro tips</h2>
+<div class="tips-grid"><div class="tip-card"><p>⌘⇧V works even when Trakisilo is unfocused — the picker floats over your other apps.</p></div>
+<div class="tip-card"><p>Half-written entries are never lost — drafts follow the doc or chronicle they belong to.</p></div>
+<div class="tip-card"><p>Type @ in any composer to link a work item — the chip shows its live status.</p></div>
+<div class="tip-card"><p>Paste mermaid source and it offers to render as a diagram — no code block needed.</p></div>
+<div class="tip-card"><p>Every feed has kind chips + a filter box — long histories stay navigable.</p></div>
+<div class="tip-card"><p>Archive instead of deleting — docs, chronicles, and cards all come back when you need them.</p></div>
+<div class="tip-card"><p>The demo sandbox can&#x27;t hurt your data — every change lives in a throwaway workspace.</p></div>
+<div class="tip-card"><p>Secret clips render •••••• until you reveal them — safe to share your screen.</p></div></div>
+</section>
+
+<div class="cta-row" style="margin-top:48px">
+  <a class="dl-btn cta-mac" href="download.html?os=mac">Download for macOS</a>
+  <a class="dl-btn cta-win" href="download.html?os=win">Download for Windows</a>
+  <a class="btn btn-ghost" href="features.html">Feature tour</a>
+</div>
+</div>
+</div>
+</main>
+
+<footer>
+  <span>© 2026 Narayan Kunal</span>
+  <span>
+    <a href="index.html">Home</a><a href="features.html">Features</a><a href="guide.html">Guide</a><a href="download.html">Download</a><a href="index.html#faq">FAQ</a><a href="https://apps.microsoft.com/detail/9P67BLH3H7P0">Microsoft Store</a>
+  </span>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>
