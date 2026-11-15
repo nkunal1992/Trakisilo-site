@@ -2,13 +2,15 @@
 # Converts captured store assets into web-optimized site assets.
 # Reads:  ../Trakisilo/store-assets/site/*.mp4   (dark loops + tour)
 #         ../Trakisilo/store-assets/site/thumb-*.png
-#         ../Trakisilo/store-assets/dark/*.png   (screenshots)
+#         ../Trakisilo/store-assets/dark/*.png   (screenshots, dark)
+#         ../Trakisilo/store-assets/light/*.png  (screenshots, light)
 # Writes: assets/v/*.mp4 assets/p/*.webp assets/s/*.webp assets/og.png favicons
 set -euo pipefail
 HERE="$(cd "$(dirname "$0")/.." && pwd)"
 SRC="${SITE_SRC:-$HOME/Projects/Trakisilo/store-assets}"
 LOOPS="$SRC/site"
 SHOTS="$SRC/dark"
+SHOTS_LIGHT="$SRC/light"
 A="$HERE/assets"
 
 [ -d "$LOOPS" ] || { echo "missing $LOOPS — record loops first" >&2; exit 1; }
@@ -48,10 +50,10 @@ encode_dir() {  # $1 loops dir, $2 output dir — f-*.mp4 loops + tour.mp4
 encode_dir "$LOOPS" "$A/v"
 [ -d "$LOOPS_LIGHT" ] && encode_dir "$LOOPS_LIGHT" "$A/v-light" || true
 
-python3 - "$LOOPS" "$LOOPS_LIGHT" "$SHOTS" "$A" "$HERE" <<'PY'
+python3 - "$LOOPS" "$LOOPS_LIGHT" "$SHOTS" "$SHOTS_LIGHT" "$A" "$HERE" <<'PY'
 import sys, os
 from PIL import Image
-loops, loops_light, shots, assets, root = sys.argv[1:6]
+loops, loops_light, shots, shots_light, assets, root = sys.argv[1:7]
 
 def save_webp(im, path, w):
     if im.width > w:
@@ -96,11 +98,15 @@ def posters(loops_dir, v_dir, p_dir):
 posters(loops, f"{assets}/v", f"{assets}/p")
 posters(loops_light, f"{assets}/v-light", f"{assets}/p-light")
 
-# Screenshots → assets/s/<NN-name>.webp at 1600w
-for n in sorted(os.listdir(shots)):
-    if n.endswith(".png"):
-        im = Image.open(os.path.join(shots, n)).convert("RGB")
-        save_webp(im, f"{assets}/s/{n[:-4]}.webp", 1600)
+# Screenshots → assets/s/<NN-name>.webp at 1600w (dark), s-light/ (light)
+for shot_dir, out_dir in ((shots, "s"), (shots_light, "s-light")):
+    if not os.path.isdir(shot_dir):
+        continue
+    os.makedirs(f"{assets}/{out_dir}", exist_ok=True)
+    for n in sorted(os.listdir(shot_dir)):
+        if n.endswith(".png"):
+            im = Image.open(os.path.join(shot_dir, n)).convert("RGB")
+            save_webp(im, f"{assets}/{out_dir}/{n[:-4]}.webp", 1600)
 
 # OG image 1200x630 from the Store hero art.
 hero = os.path.join(os.path.dirname(shots), "hero-16x9.png")
@@ -130,4 +136,4 @@ curl -sf -o "$A/ms-badge.svg" "https://get.microsoft.com/images/en-US%20dark.svg
   && echo " ms-badge.svg" || echo "badge fetch failed — add manually" >&2
 
 echo "done:"
-du -sh "$A/v" "$A/v-light" "$A/p" "$A/p-light" "$A/s" 2>/dev/null
+du -sh "$A/v" "$A/v-light" "$A/p" "$A/p-light" "$A/s" "$A/s-light" 2>/dev/null

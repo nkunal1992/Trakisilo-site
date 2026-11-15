@@ -109,7 +109,12 @@
     v.dataset.srcDark = v.dataset.src || v.getAttribute("src") || "";
     v.dataset.posterDark = v.getAttribute("poster") || "";
   });
+  var themedImgs = document.querySelectorAll("img[data-src-light]");
+  themedImgs.forEach(function (img) {
+    img.dataset.srcDark = img.getAttribute("src") || "";
+  });
   function mediaTheme(t) {
+    document.documentElement.dataset.media = t;
     themed.forEach(function (v) {
       var src = t === "light" ? v.dataset.srcLight : v.dataset.srcDark;
       var poster = t === "light" ? v.dataset.posterLight : v.dataset.posterDark;
@@ -118,6 +123,9 @@
       if (v.dataset.src !== undefined) v.dataset.src = src;
       if (v.getAttribute("src") || v.src) v.src = src;
       if (playing) v.play().catch(function () {});
+    });
+    themedImgs.forEach(function (img) {
+      img.src = t === "light" ? img.dataset.srcLight : img.dataset.srcDark;
     });
     document.querySelectorAll(".media-theme button").forEach(function (b) {
       b.setAttribute("aria-pressed", b.dataset.theme === t ? "true" : "false");
