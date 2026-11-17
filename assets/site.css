@@ -61,7 +61,7 @@ nav {
 nav .wrap { display: flex; align-items: center; gap: 30px; height: 62px; }
 .brand { display: flex; align-items: center; gap: 11px; font-weight: 700; font-size: 17.5px; color: var(--text); text-decoration: none; letter-spacing: -0.01em; }
 .brand img { width: 28px; height: 28px; border-radius: 7px; }
-.nav-links { display: flex; gap: 24px; font-size: 14.5px; }
+.nav-links { display: flex; gap: 24px; font-size: 14.5px; align-items: center; }
 .nav-links a { color: var(--dim); text-decoration: none; transition: color 0.15s; }
 .nav-links a:hover, .nav-links a.on { color: var(--text); }
 .nav-cta { margin-left: auto; display: flex; align-items: center; gap: 14px; }
@@ -484,7 +484,9 @@ kbd {
 }
 .media-theme button:hover { opacity: .85; }
 .media-theme button[aria-pressed="true"] { background: var(--card2); opacity: 1; }
-@media (max-width: 760px) { .media-theme { display: none; } }
+@media (max-width: 760px) {
+  .nav-links .media-theme { margin: 12px 0 4px; }
+}
 
 /* ==== Light preview theme (media-theme tab) ==== */
 html[data-media="light"] {
