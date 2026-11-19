@@ -51,9 +51,20 @@
 
   // Mobile nav.
   var tog = document.querySelector(".nav-toggle");
-  if (tog) {
+  var navLinks = document.querySelector(".nav-links");
+  if (tog && navLinks) {
+    var setNav = function (open) {
+      navLinks.classList.toggle("open", open);
+      tog.setAttribute("aria-expanded", open ? "true" : "false");
+    };
     tog.addEventListener("click", function () {
-      document.querySelector(".nav-links").classList.toggle("open");
+      setNav(!navLinks.classList.contains("open"));
+    });
+    navLinks.addEventListener("click", function (e) {
+      if (e.target.closest("a")) setNav(false);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") setNav(false);
     });
   }
 

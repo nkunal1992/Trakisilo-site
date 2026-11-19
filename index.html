@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#0b0f17" />
 <title>Trakisilo — Offline Kanban, Clipboard & Time Tracker for Windows & Mac</title>
 <meta name="description" content="Free, offline-first task manager for Windows and macOS: kanban boards, clipboard manager with quick-paste, time tracking with weekly timesheets, journals and docs. No account, no cloud." />
 <link rel="canonical" href="https://nkunal1992.github.io/Trakisilo-site/" />
@@ -11,10 +12,16 @@
 <meta property="og:title" content="Trakisilo — Tasks, clips, and time in one private workspace" />
 <meta property="og:description" content="Offline-first kanban + clipboard manager + time tracker. Free. No account, no cloud." />
 <meta property="og:type" content="website" />
+<meta property="og:site_name" content="Trakisilo" />
 <meta property="og:url" content="https://nkunal1992.github.io/Trakisilo-site/" />
 <meta property="og:image" content="https://nkunal1992.github.io/Trakisilo-site/assets/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Trakisilo — Tasks, clips, and time in one private workspace" />
+<meta name="twitter:description" content="Offline-first kanban + clipboard manager + time tracker. Free. No account, no cloud." />
 <meta name="twitter:image" content="https://nkunal1992.github.io/Trakisilo-site/assets/og.png" />
+<link rel="preload" href="assets/inter.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="assets/site.css" />
   <script>try{if(localStorage.getItem("trak-media-theme")==="light")document.documentElement.dataset.media="light"}catch(e){}</script>
 <script type="application/ld+json">
@@ -38,8 +45,8 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type": "Question", "name": "What's new in 2.0?",
-     "acceptedAnswer": {"@type": "Answer", "text": "A redesigned glass interface with a new activity rail, Chronicle sections and feed sorting, comments in focused dialogs, a drag-and-drop diagram canvas, AsciiMath formulas, and smarter paste handling."}},
+    {"@type": "Question", "name": "What's new in 2.1?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Paste ASCII flowcharts and network sketches and they become editable diagram blocks; right-click copies any diagram or image as a PNG; search reaches inside mail and Excel attachments."}},
     {"@type": "Question", "name": "Is Trakisilo really free?",
      "acceptedAnswer": {"@type": "Answer", "text": "Yes. All features, no subscription, no account, no trial period — and no paid tier waiting behind any of them."}},
     {"@type": "Question", "name": "Who makes Trakisilo?",
@@ -69,7 +76,7 @@
 <nav><div class="wrap">
   <a class="brand" href="index.html"><img src="icon.png" alt="" width="28" height="28" />Trakisilo</a>
   <div class="nav-links" id="navlinks">
-    <a href="index.html" class="on">Home</a>
+    <a href="index.html" class="on" aria-current="page">Home</a>
     <a href="features.html">Features</a>
     <a href="guide.html">Guide</a>
     <a href="#faq">FAQ</a>
@@ -80,7 +87,7 @@
   </div>
   <div class="nav-cta">
     <a class="nav-dl" href="download.html">Download</a>
-    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks">☰</button>
   </div>
 </div></nav>
 
@@ -93,7 +100,7 @@
       <h1>Tasks, clips, and time — <span class="grad">one private workspace</span>.</h1>
       <p class="lead">Kanban boards, a clipboard vault with a global quick-paste, time tracking with timesheets, project docs and a journal — all on your machine. No account. No cloud. No subscription.</p>
       <div class="hero-cta">
-        <a class="cta-win" href="https://apps.microsoft.com/detail/9P67BLH3H7P0"><img class="badge-store" src="assets/ms-badge.svg" alt="Get it from Microsoft" height="52" /></a>
+        <a class="cta-win" href="https://apps.microsoft.com/detail/9P67BLH3H7P0"><img class="badge-store" src="assets/ms-badge.svg" alt="Get it from Microsoft" width="190" height="52" /></a>
         <a class="dl-btn cta-mac" href="download.html">Download for Mac</a>
         <a class="more" href="features.html">See every feature →</a>
       </div>
@@ -105,21 +112,21 @@
       </div>
     </div>
     <figure class="frame glow">
-      <video muted loop playsinline preload="none" data-autoplay data-src="assets/v/hero.mp4" poster="assets/p/hero.webp" aria-label="Trakisilo in action — board, clips, docs and journal" data-src-light="assets/v-light/hero.mp4" data-poster-light="assets/p-light/hero.webp"></video>
+      <video muted loop playsinline preload="none" width="1280" height="800" data-autoplay data-src="assets/v/hero.mp4" poster="assets/p/hero.webp" aria-label="Trakisilo in action — board, clips, docs and journal" data-src-light="assets/v-light/hero.mp4" data-poster-light="assets/p-light/hero.webp"></video>
     </figure>
   </div>
 </header>
 
 <section>
   <div class="band">
-    <p class="eyebrow">New in 2.0</p>
-    <h2>Rebuilt to feel lighter</h2>
-    <p class="lead" style="margin:14px auto 26px">Frosted panels over a soft aurora backdrop, a new activity rail, and the details to match — Chronicle sections and sorting, comments in focused dialogs, a drag-and-drop diagram canvas, and math that renders as you type.</p>
+    <p class="eyebrow">New in 2.1</p>
+    <h2>Sketch it. Edit it. Copy it anywhere.</h2>
+    <p class="lead" style="margin:14px auto 26px">Paste ASCII flowcharts and network sketches — they become editable diagram blocks on the visual canvas. Right-click any diagram or image to copy it as a real PNG. And search now reaches inside mail and Excel attachments.</p>
     <div class="facts">
+      <span class="fact">ASCII art → editable diagrams</span>
+      <span class="fact">Right-click copy as PNG</span>
+      <span class="fact">Mail &amp; Excel content search</span>
       <span class="fact">Glass interface, dark &amp; light</span>
-      <span class="fact">Chronicle sections + feed sorting</span>
-      <span class="fact">Visual diagram canvas</span>
-      <span class="fact">AsciiMath &amp; inline formulas</span>
     </div>
     <p style="margin:22px 0 0"><a href="https://github.com/nkunal1992/Trakisilo-site/releases/latest">Release notes &amp; downloads →</a></p>
   </div>
@@ -142,7 +149,7 @@
       <div class="lbl">Docs next to the board</div><div class="us good">✓ Built in</div><div class="them">Paid plan / another app</div>
       <div class="lbl">Price</div><div class="us good">Free</div><div class="them">Free tiers, limits behind plans</div>
     </div>
-    <p class="cmp-note">Based on publicly listed plans and defaults, October 2026.</p>
+    <p class="cmp-note">Based on publicly listed plans and defaults, November 2026.</p>
   </div>
 </section>
 
@@ -154,27 +161,27 @@
   </div>
   <div class="bento">
     <a class="tile wide" href="features.html#kanban">
-      <video muted loop playsinline preload="none" data-autoplay data-src="assets/v/kanban.mp4" poster="assets/p/kanban.webp" aria-label="Kanban board loop" data-src-light="assets/v-light/kanban.mp4" data-poster-light="assets/p-light/kanban.webp"></video>
+      <video muted loop playsinline preload="none" width="1280" height="720" data-autoplay data-src="assets/v/kanban.mp4" poster="assets/p/kanban.webp" aria-label="Kanban board loop" data-src-light="assets/v-light/kanban.mp4" data-poster-light="assets/p-light/kanban.webp"></video>
       <div class="cap"><b>Kanban boards</b><span class="go">kanban →</span></div>
     </a>
     <a class="tile" href="features.html#quickpaste">
-      <video muted loop playsinline preload="none" data-autoplay data-src="assets/v/quickpaste.mp4" poster="assets/p/quickpaste.webp" aria-label="Quick-paste loop" data-src-light="assets/v-light/quickpaste.mp4" data-poster-light="assets/p-light/quickpaste.webp"></video>
+      <video muted loop playsinline preload="none" width="1280" height="720" data-autoplay data-src="assets/v/quickpaste.mp4" poster="assets/p/quickpaste.webp" aria-label="Quick-paste loop" data-src-light="assets/v-light/quickpaste.mp4" data-poster-light="assets/p-light/quickpaste.webp"></video>
       <div class="cap"><b>Quick-paste</b><span class="go">quickpaste →</span></div>
     </a>
     <a class="tile wide" href="features.html#editor">
-      <video muted loop playsinline preload="none" data-autoplay data-src="assets/v/editor.mp4" poster="assets/p/editor.webp" aria-label="Rich editor loop" data-src-light="assets/v-light/editor.mp4" data-poster-light="assets/p-light/editor.webp"></video>
+      <video muted loop playsinline preload="none" width="1280" height="720" data-autoplay data-src="assets/v/editor.mp4" poster="assets/p/editor.webp" aria-label="Rich editor loop" data-src-light="assets/v-light/editor.mp4" data-poster-light="assets/p-light/editor.webp"></video>
       <div class="cap"><b>Rich editor — type, then transform</b><span class="go">editor →</span></div>
     </a>
     <a class="tile" href="features.html#time">
-      <video muted loop playsinline preload="none" data-autoplay data-src="assets/v/time.mp4" poster="assets/p/time.webp" aria-label="Time tracking loop" data-src-light="assets/v-light/time.mp4" data-poster-light="assets/p-light/time.webp"></video>
+      <video muted loop playsinline preload="none" width="1280" height="720" data-autoplay data-src="assets/v/time.mp4" poster="assets/p/time.webp" aria-label="Time tracking loop" data-src-light="assets/v-light/time.mp4" data-poster-light="assets/p-light/time.webp"></video>
       <div class="cap"><b>Time &amp; timesheets</b><span class="go">time →</span></div>
     </a>
     <a class="tile s3" href="features.html#chronicle">
-      <video muted loop playsinline preload="none" data-autoplay data-src="assets/v/chronicle.mp4" poster="assets/p/chronicle.webp" aria-label="Chronicle loop" data-src-light="assets/v-light/chronicle.mp4" data-poster-light="assets/p-light/chronicle.webp"></video>
+      <video muted loop playsinline preload="none" width="1280" height="720" data-autoplay data-src="assets/v/chronicle.mp4" poster="assets/p/chronicle.webp" aria-label="Chronicle loop" data-src-light="assets/v-light/chronicle.mp4" data-poster-light="assets/p-light/chronicle.webp"></video>
       <div class="cap"><b>Chronicle journal</b><span class="go">chronicle →</span></div>
     </a>
     <a class="tile s3" href="features.html#docs">
-      <video muted loop playsinline preload="none" data-autoplay data-src="assets/v/bdoc.mp4" poster="assets/p/bdoc.webp" aria-label="Board docs loop" data-src-light="assets/v-light/bdoc.mp4" data-poster-light="assets/p-light/bdoc.webp"></video>
+      <video muted loop playsinline preload="none" width="1280" height="720" data-autoplay data-src="assets/v/bdoc.mp4" poster="assets/p/bdoc.webp" aria-label="Board docs loop" data-src-light="assets/v-light/bdoc.mp4" data-poster-light="assets/p-light/bdoc.webp"></video>
       <div class="cap"><b>Board docs</b><span class="go">docs →</span></div>
     </a>
   </div>
@@ -184,10 +191,10 @@
   <p class="eyebrow">Who it's for</p>
   <h2>Built for people who ship</h2>
   <div class="wrap personas" style="margin-top:36px">
-    <div class="persona"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg></span><b>Developers</b><p>Snippets and commands one hotkey away; specs and decisions live next to the tickets they describe.</p></div>
-    <div class="persona"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span><b>Freelancers</b><p>Track hours on the same tasks you bill for, then export the weekly timesheet to CSV.</p></div>
-    <div class="persona"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><b>Students &amp; researchers</b><p>A typed journal of decisions and sources; checklist processes for recurring work.</p></div>
-    <div class="persona"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="5" height="18" rx="1"/><rect x="10" y="3" width="5" height="11" rx="1"/><rect x="17" y="3" width="4" height="7" rx="1"/></svg></span><b>Consultants &amp; PMs</b><p>Board docs keep client decisions beside the board; processes make delivery repeatable.</p></div>
+    <div class="persona"><span class="icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg></span><b>Developers</b><p>Snippets and commands one hotkey away; specs and decisions live next to the tickets they describe.</p></div>
+    <div class="persona"><span class="icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span><b>Freelancers</b><p>Track hours on the same tasks you bill for, then export the weekly timesheet to CSV.</p></div>
+    <div class="persona"><span class="icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><b>Students &amp; researchers</b><p>A typed journal of decisions and sources; checklist processes for recurring work.</p></div>
+    <div class="persona"><span class="icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="5" height="18" rx="1"/><rect x="10" y="3" width="5" height="11" rx="1"/><rect x="17" y="3" width="4" height="7" rx="1"/></svg></span><b>Consultants &amp; PMs</b><p>Board docs keep client decisions beside the board; processes make delivery repeatable.</p></div>
   </div>
 </section>
 
@@ -210,7 +217,7 @@
   <h2>Three minutes, end to end</h2>
   <div class="wrap glow" style="max-width:1020px;margin-top:34px">
     <figure class="frame">
-      <video controls preload="none" src="assets/v/tour.mp4" poster="assets/p/tour.webp" aria-label="Full Trakisilo walkthrough" data-src-light="assets/v-light/tour.mp4" data-poster-light="assets/p-light/tour.webp"></video>
+      <video controls preload="none" width="1280" height="800" src="assets/v/tour.mp4" poster="assets/p/tour.webp" aria-label="Full Trakisilo walkthrough" data-src-light="assets/v-light/tour.mp4" data-poster-light="assets/p-light/tour.webp"></video>
     </figure>
   </div>
 </section>
@@ -223,17 +230,17 @@
   <div class="carousel">
     <button class="car-btn car-prev" aria-label="Previous screenshot">‹</button>
     <div class="car-track" tabindex="0" aria-label="Screenshot gallery">
-      <figure><div class="frame"><img loading="lazy" src="assets/s/01-kanban-board.webp" data-src-light="assets/s-light/01-kanban-board.webp" alt="Kanban board with task columns" /></div><figcaption>Kanban board — drag tasks through your own workflow</figcaption></figure>
-      <figure><div class="frame"><img loading="lazy" src="assets/s/02-task-detail.webp" data-src-light="assets/s-light/02-task-detail.webp" alt="Task detail dialog" /></div><figcaption>Card detail — subtasks, labels, estimates, comments, linked clips</figcaption></figure>
-      <figure><div class="frame"><img loading="lazy" src="assets/s/03-saved-clips.webp" data-src-light="assets/s-light/03-saved-clips.webp" alt="Saved clips view" /></div><figcaption>Saved clips — reusable text, code, links and images, organized into panels</figcaption></figure>
-      <figure><div class="frame"><img loading="lazy" src="assets/s/04-time-tracker.webp" data-src-light="assets/s-light/04-time-tracker.webp" alt="Time tracker" /></div><figcaption>Time tracker — timers or manual entries, with overlap warnings</figcaption></figure>
-      <figure><div class="frame"><img loading="lazy" src="assets/s/05-weekly-timesheet.webp" data-src-light="assets/s-light/05-weekly-timesheet.webp" alt="Weekly timesheet" /></div><figcaption>Weekly timesheet — the grid fills in as you log</figcaption></figure>
-      <figure><div class="frame"><img loading="lazy" src="assets/s/06-time-reports.webp" data-src-light="assets/s-light/06-time-reports.webp" alt="Time reports" /></div><figcaption>Reports grouped by board, label or task — CSV export</figcaption></figure>
-      <figure><div class="frame"><img loading="lazy" src="assets/s/07-calendar.webp" data-src-light="assets/s-light/07-calendar.webp" alt="Calendar view" /></div><figcaption>Calendar — tasks and logged time on one view</figcaption></figure>
-      <figure><div class="frame"><img loading="lazy" src="assets/s/08-chronicle.webp" data-src-light="assets/s-light/08-chronicle.webp" alt="Chronicle journal" /></div><figcaption>Chronicle — a typed journal with rich blocks and comments</figcaption></figure>
-      <figure><div class="frame"><img loading="lazy" src="assets/s/09-process-run.webp" data-src-light="assets/s-light/09-process-run.webp" alt="Process run" /></div><figcaption>Processes — reusable checklists you run step by step</figcaption></figure>
-      <figure><div class="frame"><img loading="lazy" src="assets/s/10-command-palette.webp" data-src-light="assets/s-light/10-command-palette.webp" alt="Command palette" /></div><figcaption>Command palette — jump anywhere with ⌘K / Ctrl+K</figcaption></figure>
-      <figure><div class="frame"><img loading="lazy" src="assets/s/11-settings-appearance.webp" data-src-light="assets/s-light/11-settings-appearance.webp" alt="Appearance settings" /></div><figcaption>Themes, accent colors, contrast and text scaling</figcaption></figure>
+      <figure><div class="frame"><img loading="lazy" decoding="async" width="1600" height="1000" src="assets/s/01-kanban-board.webp" data-src-light="assets/s-light/01-kanban-board.webp" alt="Kanban board with task columns" /></div><figcaption>Kanban board — drag tasks through your own workflow</figcaption></figure>
+      <figure><div class="frame"><img loading="lazy" decoding="async" width="1600" height="1000" src="assets/s/02-task-detail.webp" data-src-light="assets/s-light/02-task-detail.webp" alt="Task detail dialog" /></div><figcaption>Card detail — subtasks, labels, estimates, comments, linked clips</figcaption></figure>
+      <figure><div class="frame"><img loading="lazy" decoding="async" width="1600" height="1000" src="assets/s/03-saved-clips.webp" data-src-light="assets/s-light/03-saved-clips.webp" alt="Saved clips view" /></div><figcaption>Saved clips — reusable text, code, links and images, organized into panels</figcaption></figure>
+      <figure><div class="frame"><img loading="lazy" decoding="async" width="1600" height="1000" src="assets/s/04-time-tracker.webp" data-src-light="assets/s-light/04-time-tracker.webp" alt="Time tracker" /></div><figcaption>Time tracker — timers or manual entries, with overlap warnings</figcaption></figure>
+      <figure><div class="frame"><img loading="lazy" decoding="async" width="1600" height="1000" src="assets/s/05-weekly-timesheet.webp" data-src-light="assets/s-light/05-weekly-timesheet.webp" alt="Weekly timesheet" /></div><figcaption>Weekly timesheet — the grid fills in as you log</figcaption></figure>
+      <figure><div class="frame"><img loading="lazy" decoding="async" width="1600" height="1000" src="assets/s/06-time-reports.webp" data-src-light="assets/s-light/06-time-reports.webp" alt="Time reports" /></div><figcaption>Reports grouped by board, label or task — CSV export</figcaption></figure>
+      <figure><div class="frame"><img loading="lazy" decoding="async" width="1600" height="1000" src="assets/s/07-calendar.webp" data-src-light="assets/s-light/07-calendar.webp" alt="Calendar view" /></div><figcaption>Calendar — tasks and logged time on one view</figcaption></figure>
+      <figure><div class="frame"><img loading="lazy" decoding="async" width="1600" height="1000" src="assets/s/08-chronicle.webp" data-src-light="assets/s-light/08-chronicle.webp" alt="Chronicle journal" /></div><figcaption>Chronicle — a typed journal with rich blocks and comments</figcaption></figure>
+      <figure><div class="frame"><img loading="lazy" decoding="async" width="1600" height="1000" src="assets/s/09-process-run.webp" data-src-light="assets/s-light/09-process-run.webp" alt="Process run" /></div><figcaption>Processes — reusable checklists you run step by step</figcaption></figure>
+      <figure><div class="frame"><img loading="lazy" decoding="async" width="1600" height="1000" src="assets/s/10-command-palette.webp" data-src-light="assets/s-light/10-command-palette.webp" alt="Command palette" /></div><figcaption>Command palette — jump anywhere with ⌘K / Ctrl+K</figcaption></figure>
+      <figure><div class="frame"><img loading="lazy" decoding="async" width="1600" height="1000" src="assets/s/11-settings-appearance.webp" data-src-light="assets/s-light/11-settings-appearance.webp" alt="Appearance settings" /></div><figcaption>Themes, accent colors, contrast and text scaling</figcaption></figure>
     </div>
     <button class="car-btn car-next" aria-label="Next screenshot">›</button>
   </div>
@@ -245,7 +252,7 @@
     <h2>FAQ</h2>
   </div>
   <div class="wrap faq" style="max-width:760px">
-    <details><summary>What's new in 2.0?</summary><p>A redesigned glass interface with a new activity rail, Chronicle sections and feed sorting, comments in focused dialogs, a drag-and-drop diagram canvas, AsciiMath formulas, and smarter paste handling.</p></details>
+    <details><summary>What's new in 2.1?</summary><p>Paste ASCII flowcharts and network sketches and they become editable diagram blocks; right-click copies any diagram or image as a PNG; search reaches inside mail and Excel attachments — on top of the 2.0 glass redesign.</p></details>
     <details><summary>Is Trakisilo really free?</summary><p>Yes. All features, no subscription, no account, no trial period — and no paid tier waiting behind any of them.</p></details>
     <details><summary>Who makes Trakisilo?</summary><p>One independent developer — no company, no investors, no data to monetize. Free and offline isn't a growth trick: the app simply has nothing to sell but itself. Feedback goes straight to the person who builds it.</p></details>
     <details><summary>Does it need an internet connection?</summary><p>No. Trakisilo is fully offline — every feature works without a connection, and the app makes no network calls.</p></details>
@@ -263,7 +270,7 @@
     <h2>Your work, on your machine.</h2>
     <p class="lead" style="margin:14px auto 28px">Free forever · installs in seconds · nothing to sign up for</p>
     <div class="cta-row">
-      <a class="cta-win" href="https://apps.microsoft.com/detail/9P67BLH3H7P0"><img class="badge-store" src="assets/ms-badge.svg" alt="Get it from Microsoft" height="52" /></a>
+      <a class="cta-win" href="https://apps.microsoft.com/detail/9P67BLH3H7P0"><img class="badge-store" src="assets/ms-badge.svg" alt="Get it from Microsoft" width="190" height="52" /></a>
       <a class="dl-btn cta-mac" href="download.html">Download for Mac</a>
     </div>
   </div>

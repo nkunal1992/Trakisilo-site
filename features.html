@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#0b0f17" />
 <title>Features — Trakisilo: Kanban, Clips, Time Tracking & Docs, Offline</title>
 <meta name="description" content="Every Trakisilo feature shown live — kanban boards, saved clips with quick-paste, time tracking and timesheets, calendar, chronicle journal, rich board docs, and reusable processes. Free, offline, no account." />
 <link rel="canonical" href="https://nkunal1992.github.io/Trakisilo-site/features.html" />
@@ -14,6 +15,8 @@
 <meta property="og:url" content="https://nkunal1992.github.io/Trakisilo-site/features.html" />
 <meta property="og:image" content="https://nkunal1992.github.io/Trakisilo-site/assets/og.png" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://nkunal1992.github.io/Trakisilo-site/assets/og.png" />
+<link rel="preload" href="assets/inter.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="assets/site.css" />
   <script>try{if(localStorage.getItem("trak-media-theme")==="light")document.documentElement.dataset.media="light"}catch(e){}</script>
 </head>
@@ -25,7 +28,7 @@
   <a class="brand" href="index.html"><img src="icon.png" alt="" width="28" height="28" />Trakisilo</a>
   <div class="nav-links" id="navlinks">
     <a href="index.html">Home</a>
-    <a href="features.html" class="on">Features</a>
+    <a href="features.html" class="on" aria-current="page">Features</a>
     <a href="guide.html">Guide</a>
     <a href="index.html#faq">FAQ</a>
     <div class="media-theme" role="group" aria-label="Preview theme">
@@ -35,7 +38,7 @@
   </div>
   <div class="nav-cta">
     <a class="nav-dl" href="download.html">Download</a>
-    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks">☰</button>
   </div>
 </div></nav>
 
@@ -70,7 +73,7 @@
         <li><b>Due-date hashtags</b> — type <code>#tomorrow</code>, <code>#friday</code> or <code>#2026-12-05</code> and the card lands already scheduled</li>
       </ul>
     </div>
-    <figure class="frame glow"><video muted loop playsinline preload="none" data-autoplay data-src="assets/v/kanban.mp4" poster="assets/p/kanban.webp" aria-label="Kanban boards in Trakisilo" data-src-light="assets/v-light/kanban.mp4" data-poster-light="assets/p-light/kanban.webp"></video></figure>
+    <figure class="frame glow"><video muted loop playsinline preload="none" width="1280" height="720" data-autoplay data-src="assets/v/kanban.mp4" poster="assets/p/kanban.webp" aria-label="Kanban boards in Trakisilo" data-src-light="assets/v-light/kanban.mp4" data-poster-light="assets/p-light/kanban.webp"></video></figure>
   </div>
 </section>
 
@@ -89,7 +92,7 @@
         <li>File attachments — images preview and zoom inline</li>
       </ul>
     </div>
-    <figure class="frame glow"><video muted loop playsinline preload="none" data-autoplay data-src="assets/v/card.mp4" poster="assets/p/card.webp" aria-label="Card detail in Trakisilo" data-src-light="assets/v-light/card.mp4" data-poster-light="assets/p-light/card.webp"></video></figure>
+    <figure class="frame glow"><video muted loop playsinline preload="none" width="1280" height="720" data-autoplay data-src="assets/v/card.mp4" poster="assets/p/card.webp" aria-label="Card detail in Trakisilo" data-src-light="assets/v-light/card.mp4" data-poster-light="assets/p-light/card.webp"></video></figure>
   </div>
 </section>
 
@@ -107,7 +110,7 @@
         <li>Explicit saves only — nothing is captured in the background</li>
       </ul>
     </div>
-    <figure class="frame glow"><video muted loop playsinline preload="none" data-autoplay data-src="assets/v/clips.mp4" poster="assets/p/clips.webp" aria-label="Saved clips in Trakisilo" data-src-light="assets/v-light/clips.mp4" data-poster-light="assets/p-light/clips.webp"></video></figure>
+    <figure class="frame glow"><video muted loop playsinline preload="none" width="1280" height="720" data-autoplay data-src="assets/v/clips.mp4" poster="assets/p/clips.webp" aria-label="Saved clips in Trakisilo" data-src-light="assets/v-light/clips.mp4" data-poster-light="assets/p-light/clips.webp"></video></figure>
   </div>
 </section>
 
@@ -124,7 +127,7 @@
         <li>Works in every app — the picker floats above all windows</li>
       </ul>
     </div>
-    <figure class="frame glow"><video muted loop playsinline preload="none" data-autoplay data-src="assets/v/quickpaste.mp4" poster="assets/p/quickpaste.webp" aria-label="Quick-paste picker in Trakisilo" data-src-light="assets/v-light/quickpaste.mp4" data-poster-light="assets/p-light/quickpaste.webp"></video></figure>
+    <figure class="frame glow"><video muted loop playsinline preload="none" width="1280" height="720" data-autoplay data-src="assets/v/quickpaste.mp4" poster="assets/p/quickpaste.webp" aria-label="Quick-paste picker in Trakisilo" data-src-light="assets/v-light/quickpaste.mp4" data-poster-light="assets/p-light/quickpaste.webp"></video></figure>
   </div>
 </section>
 
@@ -142,7 +145,7 @@
         <li>Reports grouped by board, label or task — <b>CSV export</b></li>
       </ul>
     </div>
-    <figure class="frame glow"><video muted loop playsinline preload="none" data-autoplay data-src="assets/v/time.mp4" poster="assets/p/time.webp" aria-label="Time tracking and timesheets in Trakisilo" data-src-light="assets/v-light/time.mp4" data-poster-light="assets/p-light/time.webp"></video></figure>
+    <figure class="frame glow"><video muted loop playsinline preload="none" width="1280" height="720" data-autoplay data-src="assets/v/time.mp4" poster="assets/p/time.webp" aria-label="Time tracking and timesheets in Trakisilo" data-src-light="assets/v-light/time.mp4" data-poster-light="assets/p-light/time.webp"></video></figure>
   </div>
 </section>
 
@@ -158,7 +161,7 @@
         <li>Entries tinted by the board they belong to</li>
       </ul>
     </div>
-    <figure class="frame glow"><video muted loop playsinline preload="none" data-autoplay data-src="assets/v/calendar.mp4" poster="assets/p/calendar.webp" aria-label="Calendar in Trakisilo" data-src-light="assets/v-light/calendar.mp4" data-poster-light="assets/p-light/calendar.webp"></video></figure>
+    <figure class="frame glow"><video muted loop playsinline preload="none" width="1280" height="720" data-autoplay data-src="assets/v/calendar.mp4" poster="assets/p/calendar.webp" aria-label="Calendar in Trakisilo" data-src-light="assets/v-light/calendar.mp4" data-poster-light="assets/p-light/calendar.webp"></video></figure>
   </div>
 </section>
 
@@ -177,7 +180,7 @@
         <li>Filter by type; search across chronicles</li>
       </ul>
     </div>
-    <figure class="frame glow"><video muted loop playsinline preload="none" data-autoplay data-src="assets/v/chronicle.mp4" poster="assets/p/chronicle.webp" aria-label="Chronicle journal in Trakisilo" data-src-light="assets/v-light/chronicle.mp4" data-poster-light="assets/p-light/chronicle.webp"></video></figure>
+    <figure class="frame glow"><video muted loop playsinline preload="none" width="1280" height="720" data-autoplay data-src="assets/v/chronicle.mp4" poster="assets/p/chronicle.webp" aria-label="Chronicle journal in Trakisilo" data-src-light="assets/v-light/chronicle.mp4" data-poster-light="assets/p-light/chronicle.webp"></video></figure>
   </div>
 </section>
 
@@ -195,7 +198,7 @@
         <li>The brief line at the top keeps the goal visible</li>
       </ul>
     </div>
-    <figure class="frame glow"><video muted loop playsinline preload="none" data-autoplay data-src="assets/v/bdoc.mp4" poster="assets/p/bdoc.webp" aria-label="Board docs in Trakisilo" data-src-light="assets/v-light/bdoc.mp4" data-poster-light="assets/p-light/bdoc.webp"></video></figure>
+    <figure class="frame glow"><video muted loop playsinline preload="none" width="1280" height="720" data-autoplay data-src="assets/v/bdoc.mp4" poster="assets/p/bdoc.webp" aria-label="Board docs in Trakisilo" data-src-light="assets/v-light/bdoc.mp4" data-poster-light="assets/p-light/bdoc.webp"></video></figure>
   </div>
 </section>
 
@@ -216,7 +219,7 @@
         <li>Select text → <b>Turn into</b> converts it to any block</li>
       </ul>
     </div>
-    <figure class="frame glow"><video muted loop playsinline preload="none" data-autoplay data-src="assets/v/editor.mp4" poster="assets/p/editor.webp" aria-label="Rich editor in Trakisilo" data-src-light="assets/v-light/editor.mp4" data-poster-light="assets/p-light/editor.webp"></video></figure>
+    <figure class="frame glow"><video muted loop playsinline preload="none" width="1280" height="720" data-autoplay data-src="assets/v/editor.mp4" poster="assets/p/editor.webp" aria-label="Rich editor in Trakisilo" data-src-light="assets/v-light/editor.mp4" data-poster-light="assets/p-light/editor.webp"></video></figure>
   </div>
 </section>
 
@@ -233,7 +236,7 @@
         <li>Perfect for releases, onboarding, weekly reviews</li>
       </ul>
     </div>
-    <figure class="frame glow"><video muted loop playsinline preload="none" data-autoplay data-src="assets/v/process.mp4" poster="assets/p/process.webp" aria-label="Processes in Trakisilo" data-src-light="assets/v-light/process.mp4" data-poster-light="assets/p-light/process.webp"></video></figure>
+    <figure class="frame glow"><video muted loop playsinline preload="none" width="1280" height="720" data-autoplay data-src="assets/v/process.mp4" poster="assets/p/process.webp" aria-label="Processes in Trakisilo" data-src-light="assets/v-light/process.mp4" data-poster-light="assets/p-light/process.webp"></video></figure>
   </div>
 </section>
 
@@ -248,7 +251,7 @@
         <li>Quick actions: new board, new group, jump to a view</li>
       </ul>
     </div>
-    <figure class="frame glow"><video muted loop playsinline preload="none" data-autoplay data-src="assets/v/search.mp4" poster="assets/p/search.webp" aria-label="Search palette in Trakisilo" data-src-light="assets/v-light/search.mp4" data-poster-light="assets/p-light/search.webp"></video></figure>
+    <figure class="frame glow"><video muted loop playsinline preload="none" width="1280" height="720" data-autoplay data-src="assets/v/search.mp4" poster="assets/p/search.webp" aria-label="Search palette in Trakisilo" data-src-light="assets/v-light/search.mp4" data-poster-light="assets/p-light/search.webp"></video></figure>
   </div>
 </section>
 
@@ -266,7 +269,7 @@
         <li>Custom task statuses and label colors per board</li>
       </ul>
     </div>
-    <figure class="frame glow"><video muted loop playsinline preload="none" data-autoplay data-src="assets/v/themes.mp4" poster="assets/p/themes.webp" aria-label="Theme customization in Trakisilo" data-src-light="assets/v-light/themes.mp4" data-poster-light="assets/p-light/themes.webp"></video></figure>
+    <figure class="frame glow"><video muted loop playsinline preload="none" width="1280" height="720" data-autoplay data-src="assets/v/themes.mp4" poster="assets/p/themes.webp" aria-label="Theme customization in Trakisilo" data-src-light="assets/v-light/themes.mp4" data-poster-light="assets/p-light/themes.webp"></video></figure>
   </div>
 </section>
 
@@ -293,7 +296,7 @@
     <h2>See it end to end</h2>
     <p class="lead" style="margin:14px auto 28px"><a href="index.html#demo">Watch the 3-minute walkthrough</a> — or get it free and try every feature yourself</p>
     <div class="cta-row">
-      <a class="cta-win" href="https://apps.microsoft.com/detail/9P67BLH3H7P0"><img class="badge-store" src="assets/ms-badge.svg" alt="Get it from Microsoft" height="52" /></a>
+      <a class="cta-win" href="https://apps.microsoft.com/detail/9P67BLH3H7P0"><img class="badge-store" src="assets/ms-badge.svg" alt="Get it from Microsoft" width="190" height="52" /></a>
       <a class="dl-btn cta-mac" href="download.html">Download for Mac</a>
     </div>
   </div>

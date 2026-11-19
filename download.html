@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#0b0f17" />
 <title>Download Trakisilo — Windows &amp; macOS</title>
 <meta name="description" content="Download Trakisilo for Windows (Microsoft Store) or macOS (DMG / Homebrew). Free, offline-first, no account." />
 <link rel="canonical" href="https://nkunal1992.github.io/Trakisilo-site/download.html" />
@@ -10,8 +11,12 @@
 <meta property="og:description" content="Free, offline-first kanban, clipboard vault and time tracker — Windows &amp; macOS." />
 <meta property="og:image" content="https://nkunal1992.github.io/Trakisilo-site/assets/og.png" />
 <meta property="og:type" content="website" />
+<meta property="og:site_name" content="Trakisilo" />
+<meta property="og:url" content="https://nkunal1992.github.io/Trakisilo-site/download.html" />
+<meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
 <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<link rel="preload" href="assets/inter.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="assets/site.css" />
   <script>try{if(localStorage.getItem("trak-media-theme")==="light")document.documentElement.dataset.media="light"}catch(e){}</script>
 </head>
@@ -33,7 +38,7 @@
   </div>
   <div class="nav-cta">
     <a class="nav-dl" href="download.html">Download</a>
-    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks">☰</button>
   </div>
 </div></nav>
 
@@ -46,13 +51,15 @@
 </header>
 
 <section class="dl-grid">
-  <article class="dl-card">
+  <article class="dl-card dl-card-win">
+    <span class="dl-rec">Recommended</span>
     <h2>Windows</h2>
-    <a href="https://apps.microsoft.com/detail/9P67BLH3H7P0"><img class="badge-store" src="assets/ms-badge.svg" alt="Get it from Microsoft" height="48" /></a>
+    <a href="https://apps.microsoft.com/detail/9P67BLH3H7P0"><img class="badge-store" src="assets/ms-badge.svg" alt="Get it from Microsoft" width="176" height="48" /></a>
     <p class="dl-meta">Windows 10 (1809+) &amp; 11 · x64 + ARM64 · updates automatically via the Store</p>
   </article>
 
-  <article class="dl-card">
+  <article class="dl-card dl-card-mac">
+    <span class="dl-rec">Recommended</span>
     <h2>macOS</h2>
     <a class="dl-btn" href="https://github.com/nkunal1992/Trakisilo-site/releases/latest/download/Trakisilo-macOS-universal.dmg">Download for Mac</a>
     <p class="dl-meta">v<span data-mac-version>2.1.2</span> · universal — Apple Silicon + Intel · <span data-mac-size>26.0</span> MB · macOS 10.15+ · <span data-mac-date>19 Nov 2026</span></p>
@@ -162,7 +169,7 @@
 <div class="cta-band">
   <h2>Works offline. Keeps your data yours.</h2>
   <div class="cta-row">
-    <a class="cta-win" href="https://apps.microsoft.com/detail/9P67BLH3H7P0"><img class="badge-store" src="assets/ms-badge.svg" alt="Get it from Microsoft" height="48" /></a>
+    <a class="cta-win" href="https://apps.microsoft.com/detail/9P67BLH3H7P0"><img class="badge-store" src="assets/ms-badge.svg" alt="Get it from Microsoft" width="176" height="48" /></a>
     <a class="dl-btn cta-mac" href="https://github.com/nkunal1992/Trakisilo-site/releases/latest/download/Trakisilo-macOS-universal.dmg">Download for Mac</a>
   </div>
 </div>
