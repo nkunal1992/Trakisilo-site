@@ -15,7 +15,7 @@ A="$HERE/assets"
 
 [ -d "$LOOPS" ] || { echo "missing $LOOPS — record loops first" >&2; exit 1; }
 
-LOOPS_LIST="f-hero f-kanban f-card f-clips f-quickpaste f-time f-calendar f-chronicle f-bdoc f-editor f-process f-search f-themes"
+LOOPS_LIST="f-hero f-kanban f-card f-clips f-quickpaste f-time f-calendar f-chronicle f-bdoc f-editor f-sheet f-mail f-process f-search f-themes"
 
 # Per-loop camera moves live in tools/crops.json as `shots`: keyframes
 # [t,x,y,w] on the 1920x1080 source (h = w*9/16). Each loop starts and ends
