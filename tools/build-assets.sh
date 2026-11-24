@@ -15,7 +15,7 @@ A="$HERE/assets"
 
 [ -d "$LOOPS" ] || { echo "missing $LOOPS — record loops first" >&2; exit 1; }
 
-LOOPS_LIST="f-hero f-kanban f-card f-clips f-quickpaste f-time f-calendar f-chronicle f-bdoc f-editor f-sheet f-mail f-process f-search f-themes"
+LOOPS_LIST="f-hero f-kanban f-card f-clips f-quickpaste f-time f-calendar f-chronicle f-bdoc f-editor f-sheet f-sheets f-mail f-process f-search f-themes"
 
 # Per-loop camera moves live in tools/crops.json as `shots`: keyframes
 # [t,x,y,w] on the 1920x1080 source (h = w*9/16). Each loop starts and ends
@@ -31,7 +31,8 @@ encode_dir() {  # $1 loops dir, $2 output dir — f-*.mp4 loops + tour.mp4
     w=1280; crf=26
     [ "$n" = "f-hero" ] && { w=1600; crf=24; }
     out="$outdir/${n#f-}.mp4"
-    vf=$(python3 "$HERE/tools/camera.py" "$n" "$w")
+    src_fps=$(ffprobe -v error -select_streams v:0 -show_entries stream=r_frame_rate -of csv=p=0 "$src")
+    vf=$(python3 "$HERE/tools/camera.py" "$n" "$w" "$src_fps")
     end=$(python3 -c "import json;d=json.load(open('$HERE/tools/crops.json'));print(d.get('$n',{}).get('end') or '')")
     trim=()
     [ -n "$end" ] && trim=(-t "$end")
