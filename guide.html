@@ -183,8 +183,8 @@
 </article>
 <article class="g-entry" id="exports">
   <h3>Exports</h3>
-  <p><span class="g-label">What it does.</span> Board CSV export for spreadsheets and sharing.</p>
-  <p><span class="g-label">How to use it.</span> Board context menu → Export CSV… lands in ~/Downloads.</p>
+  <p><span class="g-label">What it does.</span> Board CSV export for spreadsheets; chronicles and board docs export to Markdown or a standalone HTML file that keeps all formatting, diagrams, math, and images — no app needed to open it. A print preview can be saved as PDF via the system print panel.</p>
+  <p><span class="g-label">How to use it.</span> Board context menu → Export CSV…; chronicle/doc menu → Export HTML, Export Markdown, or Print / Save as PDF… — files land in ~/Downloads.</p>
 </article></section>
 <section class="g-sec" id="board-documents"><h2><span class="g-icon">📄</span>Board documents</h2><p class="g-intro">Each board has an Overview surface: a brief at the top and a list of long-form documents underneath — decisions, designs, research — that live next to the cards they describe.</p><article class="g-entry" id="board-docs">
   <h3>Board docs</h3>
@@ -195,7 +195,7 @@
     <li>New document → give it a title</li>
     <li>Pick an entry kind and write — every rich block works here</li>
     <li>Add comments on entries, link work items, pin or archive the doc</li>
-    <li>Export → Markdown to share a doc as a file</li>
+    <li>Export → HTML for a standalone file, Print / Save as PDF… for paper, Markdown for plain text</li>
   </ol>
   <p class="g-tip"><span class="g-label">Tip.</span> Entries carry a kind chip (note/decision/design/discussion/research); comments open in a popup — the count pill or the chat icon on any entry.</p>
 </article>
@@ -335,7 +335,7 @@
     <li>Rail → + to create a chronicle</li>
     <li>Pick a type chip (note/release/decision/risk) and write an entry</li>
     <li>Comment on entries, filter and sort the feed, archive when the topic closes</li>
-    <li>Export → Markdown from the chronicle menu</li>
+    <li>Export → HTML or Print / Save as PDF… from the chronicle menu — the options sheet picks tabs, comments and theme</li>
   </ol>
   <p class="g-tip"><span class="g-label">Tip.</span> Entry types are editable later via Edit; comments open in a popup — the count pill or the chat icon on any entry.</p>
 </article>
@@ -351,11 +351,12 @@
 </article>
 <article class="g-entry" id="backup-restore">
   <h3>Backup &amp; restore</h3>
-  <p><span class="g-label">What it does.</span> Snapshot the database + attachments to a folder you choose; restore replaces the workspace (after auto-backing-up).</p>
-  <p><span class="g-label">How to use it.</span> Settings → Data → Backup / Import backup.</p>
+  <p><span class="g-label">What it does.</span> Automatic daily snapshots of the database + attachments into a folder you choose; keeps the last 5 plus the 15th, 30th, and end-of-month checkpoints. Restore replaces the workspace (after auto-backing-up).</p>
+  <p><span class="g-label">How to use it.</span> Settings → Data → Automatic backups to toggle and pick the folder; Saved backups lists each snapshot with a Restore action.</p>
   <ol class="g-steps">
-    <li>Settings → Data → Backup → pick a folder</li>
-    <li>Restoring? Import backup — the app snapshots current data first, then swaps in the backup</li>
+    <li>Settings → Data → Choose folder… picks where backups live; Open reveals it</li>
+    <li>Back up now snapshots immediately; Saved backups → Restore rolls back</li>
+    <li>Export a copy for an ad-hoc backup anywhere; Import backup restores it</li>
   </ol>
 </article>
 <article class="g-entry" id="recently-deleted">
